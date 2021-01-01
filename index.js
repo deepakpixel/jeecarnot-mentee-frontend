@@ -1,8 +1,8 @@
 
-// const form = document.querySelector('#form')
-// form.addEventListener('submit',e =>{
-//    e.preventDefault()
-// })
+const form = document.querySelector('#payment_form')
+form.addEventListener('submit',e =>{
+   e.preventDefault()
+})
 
 const url =" https://pay.jeecarnot.com/plans"
 fetch(url)
