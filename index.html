@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.6/dist/sweetalert2.all.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Carnot</title>
+    <script src="index.js" defer></script>
 </head>
 <body>
+
     <header>
         <div id="logo">
             <img src="./Assgn-Assets/assets/LOGO bright@2x.png" alt="logo">
@@ -15,16 +18,37 @@
 
     <div class="content">
 
-        <h1>Complete Your Profile</h1>
+        <h1>Checkout Your Profile</h1>
 
         <div class="main box">
-            <form action="" id="form">
-                <input type="text" name="name" id="name" placeholder="Name" autofocus>
+            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" >
+                <input type="text" name="firstname" id="name" placeholder="Name" autofocus>
                 <br>
                 <input type="email" name="email" id="email" placeholder="Email" >
                 <br>
                 <input type="text" name="phone" id="phone" placeholder="Phone" >
                 <br>
+
+                <!--Hidden -->
+                     <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="000" />
+
+                    <input type="text" hidden id="amount" name="amount" placeholder="Amount" value="1" />
+
+                    <input type="text" hidden id="hash" name="hash" placeholder="Hash" value="" />
+
+                    <input type="hidden" id="surl" name="surl" value="http://pay.jeecarnot.com/status" />
+
+                    <input type="hidden" id="surl" name="furl" value="http://pay.jeecarnot.com/status" />
+
+                    <input type="hidden" id="key" name="key" placeholder="Merchant Key" value="Gcmwi5eM" />
+
+                    <input type="hidden" name="service_provider" value="payu_paisa">
+                    
+                    <input type="text" hidden id="txnid" name="txnid" placeholder="Transaction ID" value="000" />
+                    <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="000" />
+                    <input type="text" id="amount" name="amount" placeholder="Amount" hidden/>
+
+                    <input type="text" id="hash" name="hash" placeholder="Hash" value="" hidden />
                 <div class="year">
                     <h1> IN WHICH YEAR YOU ARE GOING TO GIVE YOUR JEE :</h1>
                     <label for="year1">JEE 2021</label>
@@ -41,45 +65,44 @@
             <h2>Plan Selection</h2>
             <div class="plans">
 
-                <div class="plan-box one">
-                    <h1>Exclusive</h1>
+                <div class="plan-box one" id="1">
+                    <h1 class="plan-name">...</h1>
                     <div class="price">
-                        <p>Rs. <span>1999</span></p>
-                        <p>Rs. 1599</p>
-                        <p>JEE Mains 2020</p>
-                        <p>(till 6th September)</p>
+                        <p>Rs. <span class="maxprice"></span></p>
+                        <p class="amount"> ...</p>
+                       
+                        <p class="validity">--- ---</p>
                     </div>
                 </div>
-                <div class="plan-box two">
-                    <h1>Silver</h1>
+                <div class="plan-box two" id="2">
+                    <h1 class="plan-name">...</h1>
                     <div class="price">
-                        <p>Rs. <span>2500</span></p>
-                        <p>Rs. 1799</p>
-                        <p>JEE Mains 2020</p>
-                        <p>(till 27th September)</p>
+                        <p>Rs. <span class="maxprice"></span></p>
+                        <p class="amount">...</p>
+                        <p class="validity">-- --- ---</p>
                     </div>
                 </div>
-                <div class="plan-box three">
-                    <h1>Gold</h1>
+                <div class="plan-box three" id="3">
+                    <h1 class="plan-name">...</h1>
                     <div class="price">
-                        <p>Rs. <span>6000</span></p>
-                        <p>Rs. 3799</p>
-                        <p>For 6 months</p>
-                        <p>(3 months also available)</p>
+                        <p>Rs. <span class="maxprice"></span></p>
+                        <p class="amount">...</p>
+                        <p class="validity">--- --- ---</p>
                     </div>
                 </div>
-                <div class="plan-box four">
-                    <h1>Diamont</h1>
+                <div class="plan-box four" id="4">
+                    <h1 class="plan-name">...</h1>
                     <div class="price">
-                        <p>Rs. <span>12000</span></p>
-                        <p>Rs. 6599</p>
-                        <p>Per year</p>
+                        <p>Rs. <span class="maxprice"></span></p>
+                        <p class="amount">...</p>
+                        <p class="validity">...</p>
                     </div>
                 </div>
             </div>
-            <button type="submit" class="submit" form="form">Submit</button>
+            <button type="button" id="paybtn" class="submit" form="">Proceed to Checkout</button>
+            <button type="submit" id="proceed" hidden class="submit" form="payment_form">Submit</button>
         </div>
     </div>
-<script src="index.js"></script>
+
 </body>
 </html>

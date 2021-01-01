@@ -72,7 +72,7 @@ form > input{
     font-size: 20px;
     margin: 70px 10px;
 }
-button[type="submit"]{
+button[type="button"]{
     background-color: var(--dark-blue);
     color: #fff;
     transition: 0.2s all;
@@ -83,10 +83,9 @@ button[type="submit"]{
     margin: 0 0 1.7em 0;
     border-radius: 400px;
 } 
-button[type="submit"]:hover{
+button[type="button"]:hover{
     background-color: rgb(100, 79, 218);
 }
-
 .main h2{
     font-weight: 400;
     color: var(--dark-blue);
@@ -106,12 +105,19 @@ button[type="submit"]:hover{
     border-radius: 25px;
     overflow: hidden;
     cursor: pointer;
-    border: 3px solid #fff;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.171);
-    transition: 0.2s all;
+    transition: 0.1s all;
 }
 .plan-box:hover{
-    border: 3px solid var(--dark-blue);
+    border-left: 3px solid var(--dark-blue);
+    border-right: 3px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+}
+.clicked-plan{
+    border-left: 3px solid var(--dark-blue);
+    border-right: 3px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+    background-color: rgb(221, 236, 255);
 }
 .plans h1{
     color: #fff;
