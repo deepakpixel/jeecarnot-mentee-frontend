@@ -1,0 +1,87 @@
+</head>
+
+<body>
+
+
+  <!-- <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form"> -->
+  <form method="POST" action="https://secure.payu.in/_payment" id="payment_form">
+
+    <input type="hidden" id="surl" name="surl" value="http://pay.jeecarnot.com/status" />
+    <input type="hidden" id="surl" name="furl" value="http://pay.jeecarnot.com/status" />
+    <input type="hidden" id="key" name="key" placeholder="Merchant Key" value="Gcmwi5eM" />
+    <input type="hidden" name="service_provider" value="payu_paisa">
+    <input type="text" id="txnid" name="txnid" placeholder="Transaction ID" value="000" />
+
+
+
+
+
+    <input type="text" id="firstname" name="firstname" placeholder="First Name" value="" />
+    <input type="text" id="email" name="email" placeholder="Email ID" value="" />
+    <input type="text" id="phone" name="phone" placeholder="Mobile/Cell Number" value="" />
+
+    
+    <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="000" />
+    <input type="text" id="amount" name="amount" placeholder="Amount" value="1" />
+
+
+
+
+    <input type="text" id="hash" name="hash" placeholder="Hash" value="" />
+
+
+
+    <div><input type="button" id="paybtn" value="visible submit" /></div>
+    <div><input type="submit" id="proceed" value="Pay real hidden" /></div>
+  </form>
+  </div>
+
+
+</body>
+
+
+<script>
+  let DOMAIN = "http://pay.jeecarnot.com"
+  let plan=1; //change it according to user
+  document.getElementById('txnid').value = Date.now();
+
+  document.getElementById('paybtn').addEventListener('click', async (e) => {
+
+    try {
+      let firstname = document.getElementById('firstname').value;
+      let email = document.getElementById('email').value;
+      let phone = document.getElementById('phone').value;
+
+      let txnid = document.getElementById('txnid').value;
+      let productinfo = `${firstname}-${phone}-${email}`;
+      document.getElementById('productinfo').value = productinfo;
+
+      let data = {
+        firstname,
+        email,
+        phone,
+        txnid,
+        productinfo,
+        plan
+      }
+      console.log(data)
+      var res = await fetch(DOMAIN + "/calculateHash", {
+        method: "POST",
+        body: new URLSearchParams(data),
+      });
+
+      res = await res.json(res)
+      // check is success
+      if (res.type != 'success')
+        throw Error('OOPs')
+
+        document.getElementById('hash').value = res.hash;
+        document.getElementById('amount').value = res.amount;
+        // REAL SUUBMIT
+        document.getElementById('proceed').click()
+    } catch (error) {
+      return console.log('CRITICAL ERROR SHOW MESSAGE',error)
+    }
+  })
+
+</script>
