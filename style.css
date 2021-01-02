@@ -48,7 +48,6 @@ header{
     color: #374f6e !important;
 }
 form > input{
-    cursor: pointer;
     padding: 0.7em 1em;
     margin: 5px;
     width: 60%;
@@ -61,7 +60,7 @@ form > input{
     border-radius: 200px;
     transition: 0.2s all;
 }
-.year h1{
+/* .year h1{
     color: var(--dark-blue);
     font-size: 15px;
     font-weight: 400;
@@ -71,7 +70,7 @@ form > input{
     font-weight: 300;
     font-size: 20px;
     margin: 70px 10px;
-}
+} */
 button[type="button"]{
     background-color: var(--dark-blue);
     color: #fff;
@@ -89,7 +88,7 @@ button[type="button"]:hover{
 .main h2{
     font-weight: 400;
     color: var(--dark-blue);
-    margin-bottom: 0.6em;
+    margin: 1.8em 0 0.5em 0;
 }
 .plans{
     display: flex;

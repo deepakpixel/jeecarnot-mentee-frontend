@@ -4,6 +4,7 @@ form.addEventListener('submit',e =>{
    e.preventDefault()
 })
 
+// fetching plan from API
 const url =" https://pay.jeecarnot.com/plans"
 fetch(url)
 .then(res=>res.json())
@@ -24,22 +25,22 @@ const handlePlan = (data) =>{
 }
 
 const planBox = document.getElementsByClassName('plan-box')
+var plan;
 
 for(let item of planBox){
    item.addEventListener('click',()=>{
-      item.classList.toggle('clicked-plan')
-      for(let i of item.classList){
-         if(i == "clicked-plan"){
-             this.plan = Number(item.id);
-            }
-            else{
-               this.plan = "";
-         }
+     document.querySelectorAll('.plan-box').forEach(e=>{
+         e.classList.remove('clicked-plan')
+      })
+      item.classList.add('clicked-plan')
+
+      if(item.classList.contains('clicked-plan')){
+         plan = item.dataset.id
       }
-      console.log(this.plan)
+      console.log(plan)
    })
 }
-// Payent part
+
 
 let DOMAIN = "https://pay.jeecarnot.com"
 
@@ -51,15 +52,15 @@ document.getElementById('txnid').value = Date.now();
 document.getElementById('paybtn').addEventListener('click', async (e) => {
 
   try {
-    let name = document.getElementById('name').value;
+    let firstname = document.getElementById('name').value;
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
 
     let txnid = document.getElementById('txnid').value;
-    let productinfo = `${name}-${phone}-${email}`;
+    let productinfo = `${firstname}-${phone}-${email}`;
     document.getElementById('productinfo').value = productinfo;
-   //  document.getElementById('amount').value = this.plan
-   if(!name){
+   
+   if(!firstname){
       return Swal.fire(
          'Enter Your Name !!',
          '',
@@ -81,7 +82,7 @@ document.getElementById('paybtn').addEventListener('click', async (e) => {
                )
             }
          let data = {
-              name,
+              firstname,
               email,
               phone,
               txnid,
@@ -97,16 +98,16 @@ document.getElementById('paybtn').addEventListener('click', async (e) => {
     res = await res.json(res)
     // check is success
     if (res.type != 'success')
-      throw Error('OOPs')
+      throw Error('OOPs!! ')
 
       document.getElementById('hash').value = res.hash;
       document.getElementById('amount').value = res.amount;
       // REAL SUUBMIT
-      document.getElementById('proceed').click()
+     form.submit();
   } catch (error) {
        Swal.fire(
-         'Select a Plan',
-         error,
+         'Error',
+          error.message,
          'error'
       )
       return console.log('CRITICAL ERROR SHOW MESSAGE',error)

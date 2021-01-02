@@ -18,22 +18,23 @@
 
     <div class="content">
 
-        <h1>Checkout Your Profile</h1>
+        <h1>Checkout Form</h1>
 
         <div class="main box">
-            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" >
-                <input type="text" name="firstname" id="name" placeholder="Name" autofocus>
+            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" target="blank">
+
+                <input type="text" name="firstname" id="name" placeholder="Name" autofocus required>
                 <br>
-                <input type="email" name="email" id="email" placeholder="Email" >
+                <input type="email" name="email" id="email" placeholder="Email" required>
                 <br>
-                <input type="text" name="phone" id="phone" placeholder="Phone" >
+                <input type="text" name="phone" id="phone" placeholder="Phone" required>
                 <br>
 
                 <!--Hidden -->
 
-                    <input type="hidden" id="surl" name="surl" value="http://pay.jeecarnot.com/status" />
+                    <input type="hidden" id="surl" name="surl" value="https://pay.jeecarnot.com/status" />
 
-                    <input type="hidden" id="surl" name="furl" value="http://pay.jeecarnot.com/status" />
+                    <input type="hidden" id="surl" name="furl" value="https://pay.jeecarnot.com/status" />
 
                     <input type="hidden" id="key" name="key" placeholder="Merchant Key" value="Gcmwi5eM" />
 
@@ -41,10 +42,10 @@
                     
                     <input type="text" hidden id="txnid" name="txnid" placeholder="Transaction ID" value="000" />
                     <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="000" />
-                    <input type="text" id="amount" name="amount" placeholder="Amount" />
+                    <input type="text" id="amount" name="amount" placeholder="Amount" hidden />
 
-                    <input type="text" id="hash" name="hash" placeholder="Hash"  />
-                <div class="year">
+                    <input type="text" id="hash" name="hash" placeholder="Hash" hidden />
+                <!-- <div class="year">
                     <h1> IN WHICH YEAR YOU ARE GOING TO GIVE YOUR JEE :</h1>
                     <label for="year1">JEE 2021</label>
                     <input type="radio" id="year1" name="year" value="2021">
@@ -54,13 +55,13 @@
                     <br>
                     <label for="year3">JEE 2023</label>
                     <input type="radio" id="year3" name="year" value="2023">
-                </div>
-            </form>
+                </div> -->
+           
             
             <h2>Plan Selection</h2>
             <div class="plans">
 
-                <div class="plan-box one" id="1">
+                <div class="plan-box one" data-id="1">
                     <h1 class="plan-name">...</h1>
                     <div class="price">
                         <p>Rs. <span class="maxprice"></span></p>
@@ -69,7 +70,7 @@
                         <p class="validity">--- ---</p>
                     </div>
                 </div>
-                <div class="plan-box two" id="2">
+                <div class="plan-box two" data-id="2">
                     <h1 class="plan-name">...</h1>
                     <div class="price">
                         <p>Rs. <span class="maxprice"></span></p>
@@ -77,7 +78,7 @@
                         <p class="validity">-- --- ---</p>
                     </div>
                 </div>
-                <div class="plan-box three" id="3">
+                <div class="plan-box three" data-id="3">
                     <h1 class="plan-name">...</h1>
                     <div class="price">
                         <p>Rs. <span class="maxprice"></span></p>
@@ -85,17 +86,19 @@
                         <p class="validity">--- --- ---</p>
                     </div>
                 </div>
-                <div class="plan-box four" id="4">
+                <div class="plan-box four" data-id="4">
                     <h1 class="plan-name">...</h1>
                     <div class="price">
                         <p>Rs. <span class="maxprice"></span></p>
                         <p class="amount">...</p>
-                        <p class="validity">...</p>
+                        <p class="validity">--- --</p>
                     </div>
                 </div>
             </div>
+
             <button type="button" id="paybtn" class="submit" >Proceed to Checkout</button>
-            <button type="submit" id="proceed" hidden class="submit" form="payment_form">Submit</button>
+            <button type="submit" id="proceed" hidden class="submit" form="payment_form" >Submit</button>
+        </form>
         </div>
     </div>
 
