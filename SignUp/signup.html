@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> -->
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ce6453c4f8.js" crossorigin="anonymous" ></script>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="../Assgn-Assets/assets/signUpSvg.bmp" class="svg" >
+        <div class="content">
+
+            <img src="../Assgn-Assets/assets/LOGO bright.png" alt="logo" class="logo">
+
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+                
+                <div class="namefield">
+                    <!-- <i class="fa fa-user"></i> -->
+                    <input type="text" name="name" id="name" placeholder="Name" autofocus  required>
+                </div>
+                <div class="phonefield">
+
+                    <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="emailfield">
+
+                    <input type="email" name="email" id="email" placeholder="Email ID" required>
+                </div>
+                <div class="passfield">
+
+                    <input type="password" name="password" id="pass" placeholder="Password" required>
+                </div>
+                <div class="confirmfield">
+
+                    <input type="password" name="confirm-pass" id="con-pass" placeholder="Confirm password" required>
+                </div>
+                <input type="submit" value="Verify phone number" class="verify-phn">
+            </form>
+            <p class="para">Already have an account? <a href="">Login</a></p>
+
+             <p class="Or-Line">OR</p>
+
+             <div class="otherlogin">
+                <a href=""><img src="../Assgn-Assets/assets/facebook.png" alt="" width="35px"></a>
+                <a href=""><img src="../Assgn-Assets/assets/google-icon.png" alt="" width="35px"></a>
+                <a href=""><img src="../Assgn-Assets/assets/linkedin.jpg" alt="" width="32px"></a>
+             </div>
+        </div>
+    </div>
+    <div class="popup">
+
+        <h1>OTP Verification</h1>
+        <p>Enter the OTP sent to: <span> +91-7896549876</span></p>
+        <form id="otp" name="otp">
+            <input type="text" id="one" pattern="[0-9]" maxlength="1" onkeyup="otpEnterEvent(this,'two')">
+
+            <input type="text" id="two" pattern="[0-9]" maxlength="1" onkeyup="otpEnterEvent(this,'three')">
+
+            <input type="text" id="three" pattern="[0-9]" maxlength="1" onkeyup="otpEnterEvent(this,'four')">
+
+            <input type="text" id="four" pattern="[0-9]" maxlength="1">
+        </form>
+        <p>Didn't receive the OTP? <a href="" >Resend OTP</a></p>
+        <input type="submit" class="verify-otp" value="Verify and Proceed">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

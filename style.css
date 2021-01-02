@@ -5,6 +5,7 @@
    --dark-gray : #6A6B6C;
    --mid-gray : #B4B6B7;
    --light-gray : #EFEFEF;
+   --hover : #644fda;
 }
 
 *{
@@ -83,7 +84,7 @@ button[type="button"]{
     border-radius: 400px;
 } 
 button[type="button"]:hover{
-    background-color: rgb(100, 79, 218);
+    background-color: var(--hover);
 }
 .main h2{
     font-weight: 400;
