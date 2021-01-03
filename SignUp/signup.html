@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ce6453c4f8.js" crossorigin="anonymous" ></script>
+    <script src="../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -20,33 +18,37 @@
             <form id="signupForm">
                 
                 <div class="namefield">
-                    <!-- <i class="fas fa-user"></i> -->
                     <input type="text" name="name" class="inp name" placeholder="Name" autofocus >
                     <p class="required">*required</p>
+                    <i class="fas fa-user icon"></i>
                 </div>
                 <div class="phonefield">
-
                     <input type="number" name="phone" class="inp phone" placeholder="Phone Number" >
                     <p class="required">*required</p>
                     <p>Enter a valid phone number</p>
+                    <i class="fas fa-phone-alt icon"></i>
                 </div>
                 <div class="emailfield">
-                    
                     <input type="email" name="email" class="inp email" placeholder="Email ID" >
                     <p class="required">*required</p>
                     <p>Enter a valid email Id</p>
+                    <i class="fas fa-envelope icon"></i>
                     
                 </div>
                 <div class="passfield">
-                    
                     <input type="password" name="password" class="inp pass" placeholder="Password" >
+                    
                     <p class="required">*required</p>
+                    <i class="fas fa-lock icon"></i>
+                    <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
                 </div>
                 <div class="confirmfield">
                     
                     <input type="password" name="confirm-pass" class="inp con-pass" placeholder="Confirm password" >
                     <p class="required">*required</p>
                     <p>Enter same password</p>
+                    <i class="fas fa-lock icon"></i>
+                    <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
                 </div>
                 <input type="submit" value="Verify phone number" class="verify-phn">
             </form>

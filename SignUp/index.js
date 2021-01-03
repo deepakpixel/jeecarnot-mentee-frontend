@@ -7,27 +7,36 @@ const pass = document.querySelectorAll("input[type=password]")
 const signupInput = document.querySelectorAll('.inp')
 const errorLine = document.querySelectorAll('#signupForm div p')
 
-console.log(errorLine)
+
 document.querySelector('#otp').addEventListener('submit',e=>{
     e.preventDefault()
 })
 signupForm.addEventListener('submit',e=>{
     e.preventDefault()
 })
+function showPassword(e){
+    if (e.parentElement.children[0].type === "password") {
+        e.parentElement.children[0].type = "text";
+      } else {
+        e.parentElement.children[0].type = "password";
+      }
+}
 verifyPhn.addEventListener('click', e =>{
+   
     let error;
     signupInput.forEach(e=>{
         if(e.value == ""){
-           
             e.parentElement.children[1].style.display = "block" ;
             error = true;
         }
         else{
             e.parentElement.children[1].style.display = "none" ;
         }
+
         if(pass[0].value != pass[1].value ){
             error=true
-            e.parentElement.children[1].style.display = "none"
+            pass[0].parentElement.children[1].style.display = "none"
+            pass[1].parentElement.children[1].style.display = "none"
             errorLine[7].style.display = "block"
         }
         else{
@@ -35,16 +44,12 @@ verifyPhn.addEventListener('click', e =>{
         }
         
     })
+    // Quit if error
     if(error){
         return
     }
-    // if(pass[0].value != pass[1].value ){
-    //     return errorLine[7].style.display = "block"
-    // }else{
-    //      errorLine[7].style.display = "none"  
-    // }
 
-    // show popup
+ // show popup
     popup.classList.add('popup-visible')
     document.querySelectorAll('#signupForm .inp').forEach(e=>{
         e.value = ""
@@ -55,6 +60,7 @@ verifyPhn.addEventListener('click', e =>{
     document.body.style.pointerEvents = "none";
 })
 
+// otp input functionality
 function otpEnterEvent(item,id){
     if(item.value.length){
         document.getElementById(id).focus();

@@ -205,6 +205,11 @@ section{
     font-weight: 400;
     padding: 1em 0;
 }
+.notifications .fa-bell{
+    font-size: 1.3em;
+    position: absolute;
+    left: 1em;
+}
 .notifications > h1 img{
     position: absolute;
     left: 1em;
