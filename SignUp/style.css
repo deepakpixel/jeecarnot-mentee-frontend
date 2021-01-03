@@ -21,18 +21,17 @@
 .wrapper{
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
     align-items: center;
     max-width: 1200px;
     width: 95vw;
-    height: 35em;
+    height: 100vh;
     padding: 1.4em 0;
-    box-shadow: 1px 3px 10px 1px rgba(107, 105, 105, 0.486);
-    margin:3em auto;
+    margin: auto;
     border-radius: 0.5em;
     overflow: hidden;
     position: relative;
     min-width: 280px;
+    min-height: 600px;
 }
 .svg{
     height: 30em;
@@ -56,6 +55,8 @@ form{
     padding: 0.7em 1em;
     margin: 0.7em 0;
     width: 22em;
+    appearance: textfield !important;
+    -webkit-appearance: textfield;
     background-color: var(--light-gray);
 }
 ::placeholder{
@@ -88,6 +89,7 @@ input[type="submit"]:hover{
 }
 a{
     color: var(--dark-blue);
+    font-size: 1.1em;
     text-decoration: none;
 }
 .Or-Line{
@@ -176,6 +178,18 @@ a{
     display: block;
     pointer-events: visible;
 }
+/* Form validation */
+.confirmfield, .passfield, .emailfield, .namefield, .phonefield{
+    position: relative;
+}
+#signupForm div p{
+    display: none;
+    font-size: 0.7em;
+    color: red;
+    left: 1em;
+    position: absolute;
+    bottom: -0.3em;
+}
 
 @media only screen and (max-width : 1000px){
     .svg{
@@ -190,13 +204,15 @@ a{
 }
 @media only screen and (max-width : 730px){
     .wrapper{
-       flex-direction: column;
-       height: auto;
        width: 90vw;
+       height: 45em;
+    }
+    .svg{
+        display: none;
     }
     .content{
         width: 80vw;
-        margin:0 auto;
+        margin: -6em auto 0 auto;
     }
     .popup{
         width: 90vw;
