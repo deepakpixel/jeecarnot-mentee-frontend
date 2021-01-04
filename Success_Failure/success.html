@@ -47,22 +47,54 @@
         font-size: 1em;
         color: var(--dark-gray);
     }
+    .success-logo{
+        width: 80px;
+        height: 80px;
+        background: url(../Assgn-Assets/assets/okicon2x.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-top: 1em;
+        background-size: cover;
+    }
+    .failure-logo{
+        width: 80px;
+        height: 80px;
+        background: url(../Assgn-Assets/assets/times-circle-solid.svg);
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-top: 1em;
+        background-size: cover;
+    }
     p{
         margin: 0.7em;
     }
-    .success{
+    .success::after{
+        content: "Success!";
+        font-size: 2em;
+    }
+    .failure::after{
+        content: "Failure!";
         font-size: 2em;
     }
     .ref{
         margin:0 0 1.5em 0;
     }
+    a{
+        text-decoration: none;
+        background-color: var(--light-gray);
+        padding: 5px;
+        display: block;
+    }
 </style>
 <body>
     <div class="wrapper">
-        <img src="../Assgn-Assets/assets/icons8-ok-240 (2).png" alt="">
-        <p class="success">Success!</p>
+        <!-- <img src="../Assgn-Assets/assets/icons8-ok-240 (2).png" alt=""> -->
+        <div class="success-logo">  
+        </div>
+        <p class="success"></p>
         <h1>Txn ID : <span class="txn-id">7878r76utfu6uyf878gyg8</span></h1>
         <p class="ref">Ref Number : <span class="ref_no">refhgjvvjvjv</span></p>
+        <a href="">Go to home</a>
     </div>
 </body>
 </html>
