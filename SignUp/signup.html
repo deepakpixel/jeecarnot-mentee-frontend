@@ -16,37 +16,37 @@
             <img src="../Assgn-Assets/assets/LOGO bright.png" alt="logo" class="logo">
 
             <h1>Sign Up</h1>
-            <form id="signupForm">
+            <form id="signupForm" autocomplete="off" novalidate>
                 
                 <div class="namefield">
                     <input type="text" name="name" class="inp name" placeholder="Name" autofocus >
-                    <p class="required">*required</p>
+                    <p class="required">required</p>
                     <i class="fas fa-user icon"></i>
                 </div>
                 <div class="phonefield">
-                    <input type="number" name="phone" class="inp phone" placeholder="Phone Number" pattern="[0-9]{10}">
-                    <p class="required">*required</p>
-                    <p>Enter a valid phone number</p>
+                    <input type="text" name="phone" class="inp phone" placeholder="Phone Number" maxlength="10">
+                    <p class="required">required</p>
+                    <p class="valid">phone number invalid</p>
                     <i class="fas fa-phone-alt icon"></i>
                 </div>
                 <div class="emailfield">
-                    <input type="email" name="email" class="inp email" placeholder="Email ID" >
-                    <p class="required">*required</p>
-                    <p>Enter a valid email Id</p>
+                    <input type="text" name="email" class="inp email" placeholder="Email ID" >
+                    <p class="required">required</p>
+                    <p class="valid">email id invalid</p>
                     <i class="fas fa-envelope icon"></i>
                     
                 </div>
                 <div class="passfield">
                     <input type="password" name="password" class="inp pass" placeholder="Password" >
                     
-                    <p class="required">*required</p>
+                    <p class="required">required</p>
                     <i class="fas fa-lock icon"></i>
                     <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
                 </div>
                 <div class="confirmfield">
                     
                     <input type="password" name="confirm-pass" class="inp con-pass" placeholder="Confirm password" >
-                    <p class="required">*required</p>
+                    <p class="required">required</p>
                     <p>Enter same password</p>
                     <i class="fas fa-lock icon"></i>
                     <i onclick="showPassword(this)" class="fas fa-eye icon"></i>

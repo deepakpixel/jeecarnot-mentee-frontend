@@ -6,7 +6,7 @@ const otp_input = document.querySelectorAll('#otp input')
 const pass = document.querySelectorAll("input[type=password]")
 const signupInput = document.querySelectorAll('.inp')
 const errorLine = document.querySelectorAll('#signupForm div p')
-
+const valid = document.querySelectorAll('.valid')
 
 document.querySelector('#otp').addEventListener('submit',e=>{
     e.preventDefault()
@@ -21,13 +21,21 @@ function showPassword(e){
         e.parentElement.children[0].type = "password";
       }
 }
+
+
 verifyPhn.addEventListener('click', e =>{
-   
+    
+    // validation
     let error;
+
+    // check for empty space
     signupInput.forEach(e=>{
-        if(e.value == ""){
-            e.parentElement.children[1].style.display = "block" ;
+        if(/^\s*$/.test(e.value)){
+            e.value = ""
             error = true;
+            e.parentElement.children[1].style.display = "block" ;
+            valid[0].style.display = "none";
+            valid[1].style.display = "none";
         }
         else{
             e.parentElement.children[1].style.display = "none" ;
@@ -42,9 +50,33 @@ verifyPhn.addEventListener('click', e =>{
         else{
             errorLine[7].style.display = "none"  
         }
-        
+
     })
+    
+    // phone validation
+    if(!(/^\d{10}$/.test(signupInput[1].value))) {
+        error = true
+        if(/^\s*$/.test(signupInput[1].value)){
+            return
+        }
+        valid[0].style.display = "block";
+    }
+    
+    // Email validation 
+    const mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ ;
+
+    if(!mailformat.test(signupInput[2].value)) {
+        error = true
+        console.log("error in email")
+        if(/^\s*$/.test(signupInput[2].value)){
+            return
+        }
+        valid[1].style.display = "block ";
+    }
+
+
     // Quit if error
+    
     if(error){
         return
     }
@@ -76,14 +108,6 @@ function clearInput(item,id){
                otp_input[id-1].focus()
            }
        }
-    //    if(e.key === "ArrowLeft"){
-    //     if(id > 0)
-    //        otp_input[id-1].focus()
-    //     }
-    //     if(e.key === "ArrowRight"){
-    //         if(id < 3)
-    //        otp_input[id+1].focus()
-    //    }
    })
 }
 
