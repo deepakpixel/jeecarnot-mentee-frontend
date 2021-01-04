@@ -58,8 +58,11 @@ form{
     margin: 0.7em 0;
     width: 22em;
     appearance: textfield !important;
-    -webkit-appearance: textfield;
     background-color: var(--light-gray);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .icon{
     position: absolute;

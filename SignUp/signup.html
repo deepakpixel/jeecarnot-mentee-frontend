@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- <script src="../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script> -->
 </head>
 <body>
     <div class="wrapper">
@@ -23,7 +24,7 @@
                     <i class="fas fa-user icon"></i>
                 </div>
                 <div class="phonefield">
-                    <input type="number" name="phone" class="inp phone" placeholder="Phone Number" >
+                    <input type="number" name="phone" class="inp phone" placeholder="Phone Number" pattern="[0-9]{10}">
                     <p class="required">*required</p>
                     <p>Enter a valid phone number</p>
                     <i class="fas fa-phone-alt icon"></i>

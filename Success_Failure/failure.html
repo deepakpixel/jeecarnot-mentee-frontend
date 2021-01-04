@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Failed</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+    
+    :root{
+        --dark-blue : #09206F;
+        --dark-gray : #6A6B6C;
+        --mid-gray : #B4B6B7;
+        --light-gray : #EFEFEF;
+        --hover : #644fda;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body,html{
+        font-family: "Roboto" ,sans-serif;
+    }
+    .wrapper{
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 380px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.219);
+        border-radius: 10px;
+        color: var(--dark-blue);
+    }
+    .fa-times-circle{
+        font-size: 3em;
+        margin-top: 0.5em;
+    }
+    h1{
+        font-size: 1.2em;
+        font-weight: 400;
+        margin: 1em;
+    }
+    span{
+        font-weight: 300;
+        font-size: 1em;
+        color: var(--dark-gray);
+    }
+    p{
+        margin: 0.7em;
+    }
+    .success{
+        font-size: 2em;
+    }
+    .ref{
+        margin:0 0 1.5em 0;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <i class="fas fa-times-circle"></i>
+        <p class="success">Failed!</p>
+        <h1>Txn ID : <span class="txn-id">7878r76utfu6uyf878gyg8</span></h1>
+        <p class="ref">Ref Number : <span class="ref_no">refhgjvvjvjv</span></p>
+    </div>
+</body>
+</html>
