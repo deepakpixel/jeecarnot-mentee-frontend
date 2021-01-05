@@ -22,7 +22,6 @@ function showPassword(e){
       }
 }
 
-
 verifyPhn.addEventListener('click', e =>{
     
     // validation

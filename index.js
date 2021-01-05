@@ -98,7 +98,7 @@ document.getElementById('paybtn').addEventListener('click', async (e) => {
     res = await res.json(res)
     // check is success
     if (res.type != 'success')
-      throw Error('OOPs!! ')
+      throw Error('Select a plan! ')
 
       document.getElementById('hash').value = res.hash;
       document.getElementById('amount').value = res.amount;

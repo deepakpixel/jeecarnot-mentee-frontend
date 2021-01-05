@@ -19,6 +19,7 @@
 }
 
 body,html{
+    overflow-x: hidden;
     min-width: 350px !important;
     background-color: var(--light);
 }
@@ -142,9 +143,10 @@ section{
 /* Mentor profile */
 .mentor-profile{
     background-color: #fff;
-    width: 70%;
+    flex: 2;
     height: 16em;
-    margin: 2em auto;
+    margin: 2em ;
+    position: relative;
     border-radius: 1em;
     box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
 }
@@ -152,6 +154,14 @@ section{
     display: flex;
     align-items: center;
     margin: 0 0 0 1em;
+}
+.star{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    font-size: 0.8em;
+    color: var(--name-yellow);
 }
 .mentor-profile h1{
     text-align: center;
@@ -178,25 +188,67 @@ section{
 .mentor-profile span{
     color: var(--name-yellow);
 }
-.call-btn{
-    margin: 0 auto;
-    padding: 0.5em 1em;
-    border-radius: 100em;
-    background-color: var(--dark-blue);
-    width : max-content;
+
+/* todos */
+.todos{
+    width: 300px;
+    color: var(--dark-blue);
+    padding: 2em 0.3em 2em 2em;
+    background-color: #fff;
+    min-width: 300px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.178);
 }
-.call-btn a{
-    color: #fff;
-    text-decoration: none;
+.todos h1{
+    text-align: center;
+    position: relative;
+    color: var(--name-yellow);
 }
+.lists input{
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    left: -20px;
+}
+.lists ul{
+    padding: 0 0 2em 0;
+}
+.lists ul li{
+    position: relative;
+    text-align: left;
+    list-style: none;
+    margin: 1.5em 0;
+}
+.todo-btn{
+    display: flex;
+    padding: 1.5em 0;
+    justify-content: center;
+}
+.todo-btn .fa-times{
+    cursor: pointer;
+    font-size: 2em;
+    color: red;
+}
+.todo-btn .fa-plus-circle{
+    cursor: pointer;
+    font-size: 2em;
+    margin: 0 2em;
+    color: var(--dark-blue);
+}
+.todo-btn .fa-pen{
+    cursor: pointer;
+    font-size: 1.8em;
+    color: #37B723;
+}
+
 .svg{
-    height: 100%;
-    width: 70%;
+    height: 300px;
+    width: 500px;
     transform : scale(1.2);
-    background-image: url(../Assgn-Assets/assets/Studying-rafiki.png);
+    background-image: url(../../Assgn-Assets/assets/Telecommuting-pana@2x.png);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-    margin: 4em auto 0 auto ;
+    margin: 5em auto 0 auto ;
 }
 /* Notification bar */
 .hidden{
@@ -284,6 +336,52 @@ hr{
     color: var(--dark-blue);
     text-decoration: none;
 }
+/* profile info */
+.profile-info{
+    display: none;
+    width: 280px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.288);
+    top: 90%;
+    right: 5%;
+    z-index: 10;
+    overflow: hidden;
+}
+.top-info{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+.top-info .name{
+    font-size: 1em
+}
+.email{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.profile-info  ul{
+    display: flex;
+    flex-direction: column;
+    margin:0.7em ;
+}
+.profile-info ul li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--dark-blue);
+    padding: 0.5em 0;
+    list-style: none;
+}
+.profile-info ul li:hover{
+    background-color: var(--notify-hover);
+}
+.profile-info ul li img{
+    padding :0 10px;
+}
 
 /* Creating responsive layout */
 @media only screen and (max-width: 1200px){
@@ -298,6 +396,24 @@ hr{
         width: 85vw;
     }
 }
+@media only screen and (max-width: 900px){
+   section{
+       flex-direction: column;
+   }
+   .svg{
+       display: none;
+   }
+   .mentor-profile{
+      margin: 2em auto;
+      padding:0 0 1em 0;
+   }
+   .todos{
+       border-radius: 1em;
+       width: 85vw;
+       margin: auto;
+   }
+  
+}
 @media only screen and (max-width: 600px){
     .mentor-profile{
         height: 24em;
@@ -305,6 +421,9 @@ hr{
     .mentor-center{
         padding: 1em 0 0 0;
         flex-direction: column;
+    }
+    .star{
+        top: -2em;
     }
     .svg{
         display: none;

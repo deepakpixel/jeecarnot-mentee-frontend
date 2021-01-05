@@ -8,6 +8,7 @@
 
 const bar = document.querySelector('.bar');
 const sidebar = document.querySelector('.sidebar')
+const profile = document.querySelector(".male-profile");
 
 bar.addEventListener('click',(e)=>{
     sidebar.classList.toggle('active')
@@ -34,7 +35,11 @@ window.addEventListener('resize',(e)=>{
 
 
 const bell = document.querySelector(".bell")
+
 bell.addEventListener("click",e=>{
     document.querySelector(".notifications").classList.toggle("hidden")
+})
+profile.addEventListener("click",e=>{
+    document.querySelector(".profile-info").classList.toggle("hidden")
 })
 

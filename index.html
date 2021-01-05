@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.6/dist/sweetalert2.all.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <title>Carnot</title>
+    <title>Checkout</title>
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -21,7 +21,7 @@
         <h1>Checkout Form</h1>
 
         <div class="main box">
-            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" target="blank">
+            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" novalidate autocomplete="off">
 
                 <input type="text" name="firstname" id="name" placeholder="Name" autofocus required>
                 <br>
@@ -45,17 +45,7 @@
                     <input type="text" id="amount" name="amount" placeholder="Amount" hidden />
 
                     <input type="text" id="hash" name="hash" placeholder="Hash" hidden />
-                <!-- <div class="year">
-                    <h1> IN WHICH YEAR YOU ARE GOING TO GIVE YOUR JEE :</h1>
-                    <label for="year1">JEE 2021</label>
-                    <input type="radio" id="year1" name="year" value="2021">
-                    <br>
-                    <label for="year2">JEE 2022</label>
-                    <input type="radio" id="year2" name="year" value="2022">
-                    <br>
-                    <label for="year3">JEE 2023</label>
-                    <input type="radio" id="year3" name="year" value="2023">
-                </div> -->
+        
            
             
             <h2>Plan Selection</h2>
@@ -107,7 +97,8 @@
                     color: var(--dark-blue);
                 }
                 .consent {
-                    margin-bottom: 10px;
+                    margin-bottom: 1em;
+                    font-size: 0.8em;
                 }
             </style>
             <button type="button" id="paybtn" class="submit" >Proceed to Checkout</button>
