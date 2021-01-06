@@ -160,11 +160,35 @@ section{
     align-items: center;
     
 }
+.item-no{
+    position: absolute;
+    bottom: -1.5em;
+    color: #676768;
+    font-weight: 300;
+}
+.fa-sort-down{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    font-size: 1.5em;
+    color: var(--dark-blue);
+}
+.subject-content{
+    display: grid;
+    width: 100% ;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 146, 146);
+}
 .key-value img{
     height: 90px;
     margin-right: 2em;
 }
 .left-key{
+    position: relative;
     color: var(--dark-blue);
 }
 .right-value{

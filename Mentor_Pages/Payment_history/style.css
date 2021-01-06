@@ -154,26 +154,45 @@ section{
 }
 
 .key-value{
-    padding: 1em;
+    margin: 2em 0;
     font-size: 14px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     
 }
-.key-value img{
-    height: 90px;
-    margin-right: 2em;
+.date-time{
+    
+    color: var(--notify-text);
+    font-weight: 600;
+    margin: 0 2em;
+    position: relative;
 }
-.left-key{
+.date-time::after{
+    content: "";
+    width: 2px;
+    height: 4em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: var(--notify-text);
+}
+.pay-details p{
+    color: var(--notify-text);
+}
+.pay-details span{
+    font-weight: 300;
+}
+.invoice{
+    color: var(--dark-blue);
+    display: flex;
+    margin: 4px 0;
+}
+.invoice  p{
+    font-weight: 300;
+    margin: 0 3em 0 0;
     color: var(--dark-blue);
 }
-.right-value{
-    font-weight: 300;
-    color: #969799;
-}
-.left-key p, .right-value p{
-    margin: 5px 0;
-}
+
 /* todos */
 .todos{
     width: 300px;
