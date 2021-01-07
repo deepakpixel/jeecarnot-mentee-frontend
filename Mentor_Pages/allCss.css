@@ -18,7 +18,7 @@
 }
 
 body,html{
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Roboto',sans-serif !important;
     min-width: 350px !important;
     background-color: var(--light);
 }
@@ -135,7 +135,236 @@ section{
     border-left:  4px solid #fff;
 }
 
-/* Mentor password */
+/* Mentor profile */
+.mentor-profile{
+    background-color: #fff;
+    flex: 2;
+    height: 16em;
+    margin: 2em ;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+}
+.mentor-center{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 1em;
+}
+.star{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    font-size: 0.8em;
+    color: var(--name-yellow);
+}
+.mentor-profile h1{
+    text-align: center;
+    background-color: var(--dark-blue);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    font-weight: 300;
+    width: max-content;
+    margin: auto;
+    padding: 15px 35px;
+}
+.mentor-img{
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--name-yellow);
+}
+.mentor-profile p{
+    width: 300px;
+    color: var(--dark-blue);
+    margin: 0 0 18px 20px;
+}
+.mentor-profile span{
+    color: var(--name-yellow);
+}
+/* -------------------------- */
+/* Material Request */
+
+.material-request{
+    background-color: #fff;
+    height: max-content;
+    flex: 2;
+    margin: 10em 4em 2em 4em;
+    position: relative;
+    border-radius: 1em;
+}
+.pass-head{
+    position: absolute;
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 600;
+    left: -1em;
+    top: -2.7em;
+}
+
+.key-value{
+    padding: 1em;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.item-no{
+    position: absolute;
+    bottom: -1.5em;
+    color: #676768;
+    font-weight: 300;
+}
+.fa-sort-down{
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    font-size: 1.5em;
+    color: var(--dark-blue);
+}
+.subject-content{
+    display: grid;
+    width: 100% ;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 146, 146);
+}
+.key-value img{
+    height: 90px;
+    margin-right: 2em;
+}
+.left-key{
+    position: relative;
+    color: var(--dark-blue);
+}
+.right-value{
+    font-weight: 300;
+    color: #969799;
+}
+.left-key p, .right-value p{
+    margin: 5px 0;
+}
+/* ---------------------------- */
+/* Password Change */
+
+.mentor-password{
+    background-color: #fff;
+    flex: 2;
+    height: 16em;
+    margin: 10em 4em 2em 4em;
+    position: relative;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+}
+.mentor-password h1{
+    text-align: center;
+    color: var(--dark-blue);
+    border-radius: 0 0 20px 20px;
+    font-weight: 400;
+    width: max-content;
+    margin: auto;
+    padding: 15px 35px;
+}
+.pass-head{
+    position: absolute;
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 600;
+    left: -1em;
+    top: -2.7em;
+}
+.mentor-password input{
+    border: 2px solid var(--dark-blue);
+    outline: none;
+    border-radius: 5px;
+    padding: 0.3em;
+    margin: 3px;
+}
+.mentor-password label{
+    margin-top: 10px;
+    color: var(--dark-blue);
+}
+.error{
+    display: none;
+    color: red;
+    font-size: 10px;
+}
+.save-btn{
+    padding: 0.7em 2em;
+    cursor: pointer;
+    margin: 1em;
+    border: none;
+    outline: none;
+    border-radius: 200px;
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+/* ---------------------- */
+/* Payment history */
+
+.payment-history{
+    background-color: #fff;
+    height: max-content;
+    flex: 2;
+    margin: 10em 4em 2em 4em;
+    position: relative;
+    border-radius: 1em;
+}
+.pass-head{
+    position: absolute;
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 600;
+    left: -1em;
+    top: -2.7em;
+}
+
+.key-value_pay{
+    margin: 2em 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    
+}
+.date-time{
+    
+    color: var(--notify-text);
+    font-weight: 600;
+    margin: 0 2em;
+    position: relative;
+}
+.date-time::after{
+    content: "";
+    width: 2px;
+    height: 4em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: var(--notify-text);
+}
+.pay-details p{
+    color: var(--notify-text);
+}
+.pay-details span{
+    font-weight: 300;
+}
+.invoice{
+    color: var(--dark-blue);
+    display: flex;
+    margin: 4px 0;
+}
+.invoice  p{
+    font-weight: 300;
+    margin: 0 3em 0 0;
+    color: var(--dark-blue);
+}
+/* ---------------- */
+/* Mentor profile */
+
 .mentor-details{
     background-color: #fff;
     flex: 2;
@@ -164,7 +393,7 @@ section{
     left: -1em;
     top: -2.7em;
 }
-.mentor-img{
+.mentor-img_profile{
     width: 170px;
     height: 170px;
     border-radius: 50%;
@@ -176,23 +405,64 @@ section{
     background-repeat: no-repeat;
     background-size: contain;
 }
-.key-value{
+.key-value-profile{
     padding: 2em 1em;
     font-size: 14px;
     display: flex;
     text-align: left;
     justify-content: space-evenly;
 }
-.left-key{
+.left-key-profile{
     color: var(--dark-blue);
 }
-.right-value{
+.right-value-profile{
     font-weight: 300;
     color: #969799;
 }
-.name{
-    color: var(--name-yellow);
+
+/* ------------------ */
+/* Your mentees */
+
+.mentees{
+    background-color: #fff;
+    height: max-content;
+    flex: 2;
+    margin: 10em 4em 2em 4em;
+    position: relative;
+    border-radius: 1em;
 }
+.pass-head{
+    position: absolute;
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 600;
+    left: -1em;
+    top: -2.7em;
+}
+
+.key-value-mentee{
+    padding: 1em;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    
+}
+.key-value-mentee img{
+    height: 90px;
+    margin-right: 2em;
+}
+.left-key-mentee{
+    color: var(--dark-blue);
+}
+.right-value-mentee{
+    font-weight: 300;
+    color: #969799;
+}
+.left-key-mentee p, .right-value-mentee p{
+    margin: 5px 0;
+}
+
+
 /* todos */
 .todos{
     width: 300px;
@@ -223,7 +493,7 @@ section{
     margin: 1.5em 0;
 }
 .todo-btn{
-    display: flex;
+    display: none;
     padding: 1.5em 0;
     justify-content: center;
 }
@@ -244,6 +514,16 @@ section{
     color: #37B723;
 }
 
+.svg{
+    height: 300px;
+    width: 500px;
+    transform : scale(1.2);
+    background-image: url(../../Assgn-Assets/assets/Telecommuting-pana@2x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 5em auto 0 auto ;
+}
 /* Notification bar */
 .hidden{
     display: block !important;
@@ -350,9 +630,6 @@ hr{
     background-color: var(--dark-blue);
     color: #fff;
 }
-.top-info .name{
-    font-size: 1em
-}
 .email{
     font-size: 0.8em;
     font-weight: 300;
@@ -385,27 +662,55 @@ hr{
     .bar{
         display: block;
     }
-    
+    .mentor-profile{
+        margin-top: 4em;
+        width: 85vw;
+    }
 }
 @media only screen and (max-width: 900px){
    section{
        flex-direction: column;
    }
+   .svg{
+       display: none;
+   }
+   .mentor-profile{
+      margin: 2em auto;
+      padding:0 0 1em 0;
+   }
    .todos{
        border-radius: 1em;
-       width: 85vw;
+       width: 90vw;
        margin: auto;
    }
   
 }
 @media only screen and (max-width: 600px){
-    .mentor-details{
+    .mentor-profile{
+        height: 24em;
+    }
+    .mentor-center{
+        padding: 1em 0 0 0;
+        flex-direction: column;
+    }
+    .mentor-details,.material-request,.mentor-password,.payment-history,.mentees{
         width: 90vw;
         margin:8em auto 3em auto;
+    }
+    .mentor-img_profile{
+        width: 150px;
+        height: 150px;
+        top: -4.5em;
     }
     .pass-head{
         left: 5px;
         top: -2em;
+    }
+    .star{
+        top: -2em;
+    }
+    .svg{
+        display: none;
     }
     #logo img{
         width: 140px;
