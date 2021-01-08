@@ -33,7 +33,6 @@ window.addEventListener('resize',(e)=>{
     }
 })
 
-
 const bell = document.querySelector(".bell")
 
 bell.addEventListener("click",e=>{
@@ -41,4 +40,19 @@ bell.addEventListener("click",e=>{
 })
 profile.addEventListener("click",e=>{
     document.querySelector(".profile-info").classList.toggle("hidden")
+})
+
+document.querySelectorAll(".subject").forEach(e=>{
+    e.addEventListener('click',evt=>{
+        e.classList.toggle('clicked-sub')
+    })
+})
+
+const dropDown = document.querySelectorAll(".dropdown")
+const subContent = document.querySelector('.subject-content')
+dropDown.forEach(e=>{
+    e.addEventListener('click',evt=>{
+        subContent.classList.toggle("active-sub")
+        subContent.style.top = `${e.dataset.id*120}px`
+    })
 })
