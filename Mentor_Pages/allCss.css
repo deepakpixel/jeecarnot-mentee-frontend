@@ -36,7 +36,7 @@ header{
     right: 0;
     top: 0;
     left: 0;
-    z-index: 100000;
+    z-index: 10;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
@@ -87,9 +87,9 @@ header{
 }
 .bar{
     display: none; 
-    position: absolute;
+    position: fixed;
     cursor: pointer;
-    z-index: 20;
+    z-index: 100;
     width: 2.4em;
     height: 2.4em;
     margin: 5px 0 0 1vw;
@@ -235,7 +235,7 @@ section{
     border-radius: 10px;
     padding: 1em 1em 4em 1em;
     position: absolute;
-    z-index: 10;
+    z-index: 2;
     left: 0;
     right: 0;
     background-color: #ffffff;
@@ -273,6 +273,9 @@ section{
 }
 .subject img{
     height: 50px !important;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 .subject p{
     color: var(--dark-blue);
@@ -405,6 +408,7 @@ section{
     color: var(--dark-blue);
     display: flex;
     margin: 4px 0;
+    cursor: pointer;
 }
 .invoice  p{
     font-weight: 300;
@@ -787,12 +791,8 @@ hr{
 }
 @media only screen and (max-width: 400px){
     .subject-content{
-        display: block;
         grid-template-columns: auto;
     }
-    .subject{
-       width: 250px;
-       margin: 10px auto 20px auto;  
-    }
+    
 }
 
