@@ -18,7 +18,7 @@
 }
 
 body,html{
-    font-family: 'Roboto',sans-serif !important;
+    font-family: 'Roboto',sans-serif ;
     min-width: 350px !important;
     background-color: var(--light);
 }
@@ -89,7 +89,7 @@ header{
     display: none; 
     position: fixed;
     cursor: pointer;
-    z-index: 100;
+    z-index: 3;
     width: 2.4em;
     height: 2.4em;
     margin: 5px 0 0 1vw;
@@ -118,7 +118,7 @@ section{
     width: 300px;
     padding: 45px 0 0 0px;
    
-    z-index: 15;
+    z-index: 2;
 }
 .sidebar ul li{
     list-style: none;
@@ -139,7 +139,7 @@ section{
     border-left:  4px solid #fff;
 }
 
-/* Mentor profile */
+/* Mentor profile About */
 .mentor-profile{
     background-color: #fff;
     flex: 2;
@@ -235,7 +235,7 @@ section{
     border-radius: 10px;
     padding: 1em 1em 4em 1em;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     left: 0;
     right: 0;
     background-color: #ffffff;
@@ -462,7 +462,7 @@ section{
     top: -5em;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(../../Assgn-Assets/assets/icons8-circled-user-male-skin-type-3-96@2x.png);
+    background-image: url(/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-circled-user-male-skin-type-3-96@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -579,7 +579,7 @@ section{
     height: 300px;
     width: 500px;
     transform : scale(1.2);
-    background-image: url(../../Assgn-Assets/assets/Telecommuting-pana@2x.png);
+    background-image: url(..//jeecarnot-mentee-frontend/cdn/Assets/images/Telecommuting-pana@2x.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -99,7 +99,7 @@ function otpEnterEvent(item,id){
 }
 function clearInput(item,id){
    item.addEventListener('keyup',e=>{
-       if(e.key === "Backspace"){
+       if(e.key == "Backspace"){
            if(id > 0){
                if(id == 3){
                    item.value = ""
@@ -109,4 +109,22 @@ function clearInput(item,id){
        }
    })
 }
+const timer = document.querySelector('.timer')
+let a = 61
+let time = setInterval(() => {
+    let zero = (a > 10)? "": "0";
+
+    timer.innerHTML =`0:${zero}${a-1}` 
+    document.querySelector(".resend").style.color = "gray"
+    document.querySelector(".resend").style.pointerEvents = "none"
+    
+    a=a-1;
+    if(a==0){
+        clearInterval(time)
+        timer.style.display = "none"
+        document.querySelector(".resend").style.color = ""
+        document.querySelector(".resend").style.pointerEvents = "visible"
+        return
+    }
+}, 1000);
 

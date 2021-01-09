@@ -193,7 +193,7 @@ section{
     height: 100%;
     width: 70%;
     transform : scale(1.2);
-    background-image: url(../Assgn-Assets/assets/Studying-rafiki.png);
+    background-image: url(/jeecarnot-mentee-frontend/cdn/Assets/images/Studying-rafiki.png);
     background-repeat: no-repeat;
     background-position: center;
     margin: 4em auto 0 auto ;

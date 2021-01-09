@@ -147,7 +147,7 @@ a{
 }
 .popup{
     z-index: 100;
-    display: none;
+    display: block;
     background-color: #fff;
     width: 26em;
     min-width: 280px;
@@ -159,6 +159,10 @@ a{
     border-radius: 1em;
     box-shadow: 0 0 0 1000vw rgba(0, 0, 0, 0.5);
     transform: translate(-50%,-50%);
+}
+.timer{
+    color: var(--semi-gray) !important;
+    margin: 0 0 0 0.5em;
 }
 .popup h1{
     font-size: 1.5em;
@@ -172,6 +176,10 @@ a{
 }
 .popup p span{
     color: var(--dark-blue);
+}
+.resend{
+    user-select: none;
+    pointer-events: none; 
 }
 #otp {
     display : grid;

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="../allCss.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" > -->
-    <script src="../../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script>
-    <title>About</title>
+    <link rel="stylesheet" href="/jeecarnot-mentee-frontend/cdn/Assets/css/mentorAll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" >
+    <!-- <script src="../../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script> -->
+    <title>Mentor Profile</title>
 </head>
 <body>
     <!-- Top header or topbar -->
     <header>
         <div id="logo">
-            <img src="../../Assgn-Assets/assets/LOGO bright@2x.png" alt="logo">
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright@2x.png" alt="logo">
         </div>
         <div id="alert">
-            <img class="bell" src="../../Assgn-Assets/assets/bell-regular.svg" alt="notification">
+            <img class="bell" src="/jeecarnot-mentee-frontend/cdn/Assets/images/bell-regular.svg" alt="notification">
 
             <div class="notifications">
 
@@ -46,7 +46,7 @@
 
             <div class="profile-info">
                 <div class="top-info">
-                    <img src="../../Assgn-Assets/assets/icons8-circled-user-male-skin-type-3-96.png" alt="">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-circled-user-male-skin-type-3-96.png" alt="">
                     <div class="name_email">
 
                         <p class="name">Swati Vyas</p>
@@ -54,13 +54,13 @@
                     </div>
                 </div>
                 <ul>
-                    <li onclick="location.href='../Profile'"><img src="../../Assgn-Assets/assets/icons8-customer-100.png" alt="">Profile</li>
-                    <li onclick="location.href='../Password'"><img src="../../Assgn-Assets/assets/icons8-settings-100.png" alt="">Password</li>
-                    <li><img src="../../Assgn-Assets/assets/icons8-sign-out-100.png" alt="">Logout</li>
+                    <li onclick="location.href='profile.html'"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-customer-100.png" alt="">Profile</li>
+                    <li onclick="location.href='password.html'"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-settings-100.png" alt="">Password</li>
+                    <li><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-sign-out-100.png" alt="">Logout</li>
                 </ul>
             </div>
 
-            <img class="male-profile" src="../../Assgn-Assets/assets/icons8-circled-user-male-skin-type-3-96.png" alt="">
+            <img class="male-profile" src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-circled-user-male-skin-type-3-96.png" alt="">
 
         </div>
     </header>
@@ -72,30 +72,44 @@
 
         <aside class="sidebar">
            <ul>
-               <li onclick="location.href='../About'" id="home"><img src="../../Assgn-Assets/assets/icons8-home-100 (2)@2x.png" alt="home-icon"> HOME</li>
-               <li onclick="location.href='../Your_mentee'" id="study"><img src="../../Assgn-Assets/assets/icons8-student-male-100@2x.png" alt="study-material">YOUR MENTEES</li>
-               <li  onclick="location.href='../Material_request'"id="blog"><img src="../../Assgn-Assets/assets/icons8-book-100@2x.png" alt="blog-icon"> MATERIAL REQUESTS</li>
-               <li  onclick="location.href='../Payment_history'" id="feedback"><img src="../../Assgn-Assets/assets/icons8-rupee-100 (2)@2x.png" alt="feedback-icon"> PAYMENT HISTORY</li>
+            <li onclick="location.href='about.html'" id="home"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-home-100 (2)@2x.png" alt="home-icon"> HOME</li>
+            <li onclick="location.href='your-mentees.html'" id="study"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-student-male-100@2x.png" alt="study-material">YOUR MENTEES</li>
+            <li  onclick="location.href='material-request.html'"id="blog"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-book-100@2x.png" alt="blog-icon"> MATERIAL REQUESTS</li>
+            <li  onclick="location.href='payment-history.html'" id="feedback"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-rupee-100 (2)@2x.png" alt="feedback-icon"> PAYMENT HISTORY</li>
               
            </ul>
        </aside> 
+        
 
-        <div class="mentor-profile about">
-            <h1>
-                About You
-            </h1>
-            <div class="star"><img src="../../Assgn-Assets/assets/icons8-star-96@2x.png" width="15px" alt="">Star Mentor</div>
-            <div class="mentor-center">
-                    <img src="../../Assgn-Assets/assets/Untitled-0.png" class="mentor-img" alt="pic">
-
-                    <div class="mentor-info">
-                        <p>Name : <span>Swati Mishra</span></p>
-                        <p>E-mail : <span>swatimishra18@gmail.com</span></p>
-                        <p>Phone : <span>9879648546</span></p>
-                        
-                    </div>
+        <div class="mentor-details">
+            <div class="edit-profile">
+                <i class="fas fa-user-edit"></i>
             </div>
-            <div class="svg"></div>
+            <div class="pass-head">Profile</div>
+            <div class="mentor-img_profile"></div>
+            <h1>Swati Mishra</h1>
+            <p class="name">Carnot Mentor</p>
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-star-96.png" alt="">
+            <div class="key-value-profile">
+                <div class="left-key-profile">
+                    <p>Email : </p>
+                    <p>Phone : </p>
+                    <p>Alternate Phone : </p>
+                    <p>College : </p>
+                    <p>Year : </p>
+                    <p>Carnot Rank : </p>
+                </div>
+                <div class="right-value-profile">
+                    <p>swatimishra18@gmail.com</p>
+                    <p>+91-7987878887</p>
+                    <p>+91-7987878887</p>
+                    <p>IIT Bombay</p>
+                    <p>3rd Year</p>
+                    <p>1st(Star Mentor)</p>
+                </div>
+            </div>
+          
+            
         </div>
         
         <div class="todos" >
@@ -112,7 +126,7 @@
                   
                 </ul>
             </div>
-            <div class="todo-btn">
+            <!-- <div class="todo-btn">
                <div class="delete-todo">
                    <i class="fas fa-times"></i>
                </div>
@@ -122,9 +136,10 @@
                <div class="pen-todo">
                    <i class="fas fa-pen"></i>
                </div>
-            </div>
+            </div> -->
         </div>
     </section>
-    <script src="index.js"></script>
+    <script src="/jeecarnot-mentee-frontend/cdn/Assets/js/profile.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" > -->
 </body>
 </html>

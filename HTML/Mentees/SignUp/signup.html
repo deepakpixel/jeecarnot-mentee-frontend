@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <img src="../Assgn-Assets/assets/signUpSvg.bmp" class="svg" >
+        <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/signUpSvg.bmp" class="svg" >
         <div class="content">
 
-            <img src="../Assgn-Assets/assets/LOGO bright.png" alt="logo" class="logo">
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright.png" alt="logo" class="logo">
 
             <h1>Sign Up</h1>
             <form id="signupForm" autocomplete="off" novalidate>
@@ -58,9 +58,9 @@
              <p class="Or-Line">OR</p>
 
              <div class="otherlogin">
-                <a href=""><img src="../Assgn-Assets/assets/facebook.png" alt="" width="35px"></a>
-                <a href=""><img src="../Assgn-Assets/assets/google-icon.png" alt="" width="35px"></a>
-                <a href=""><img src="../Assgn-Assets/assets/linkedin.jpg" alt="" width="32px"></a>
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/facebook.png" alt="" width="35px"></a>
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/google-icon.png" alt="" width="35px"></a>
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/linkedin.jpg" alt="" width="32px"></a>
              </div>
         </div>
     </div>
@@ -77,7 +77,8 @@
 
             <input type="text" id="four" pattern="[0-9]" maxlength="1" onfocus="clearInput(this,Number(this.dataset.id))" data-id="3">
         </form>
-        <p>Didn't receive the OTP? <a href="" >Resend OTP</a></p>
+        <p>Didn't receive the OTP? <span class="timer"></span> <a href="" class="resend">Resend OTP</a></p>
+        
         <input type="submit" class="verify-otp" value="Verify and Proceed">
     </div>
     <script src="index.js"></script>
