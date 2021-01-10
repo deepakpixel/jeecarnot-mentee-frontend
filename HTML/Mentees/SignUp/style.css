@@ -147,7 +147,7 @@ a{
 }
 .popup{
     z-index: 100;
-    display: block;
+    display: none;
     background-color: #fff;
     width: 26em;
     min-width: 280px;

@@ -82,6 +82,7 @@ verifyPhn.addEventListener('click', e =>{
 
  // show popup
     popup.classList.add('popup-visible')
+    timerFunction(61)
     document.querySelectorAll('#signupForm .inp').forEach(e=>{
         e.value = ""
     })
@@ -109,22 +110,26 @@ function clearInput(item,id){
        }
    })
 }
+//time for resend
 const timer = document.querySelector('.timer')
-let a = 61
-let time = setInterval(() => {
-    let zero = (a > 10)? "": "0";
 
-    timer.innerHTML =`0:${zero}${a-1}` 
-    document.querySelector(".resend").style.color = "gray"
-    document.querySelector(".resend").style.pointerEvents = "none"
-    
-    a=a-1;
-    if(a==0){
-        clearInterval(time)
-        timer.style.display = "none"
-        document.querySelector(".resend").style.color = ""
-        document.querySelector(".resend").style.pointerEvents = "visible"
-        return
-    }
-}, 1000);
+const timerFunction =(a)=>{
+
+    let time = setInterval(() => {
+        let zero = (a > 10)? "": "0";
+        
+        timer.innerHTML =`0:${zero}${a-1}` 
+        document.querySelector(".resend").style.color = "gray"
+        document.querySelector(".resend").style.pointerEvents = "none"
+        
+        a=a-1;
+        if(a==0){
+            clearInterval(time)
+            timer.style.display = "none"
+            document.querySelector(".resend").style.color = ""
+            document.querySelector(".resend").style.pointerEvents = "visible"
+            return
+        }
+    }, 1000);
+}
 

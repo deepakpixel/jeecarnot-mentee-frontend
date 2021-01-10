@@ -15,6 +15,7 @@
     margin: 0;
     box-sizing: border-box !important;
     outline: none !important;
+   
 }
 
 body,html{
@@ -42,6 +43,7 @@ header{
     align-items: center;
     background-color: #fff;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.424);
+    user-select: none;
 }
 #logo img{
     width: 200px;
@@ -102,23 +104,25 @@ header{
     transition: 0.1s all ease-out;
 }
 .bar-transform{
-    
     transform: translate(240px);
 }
 section{
     display: flex;
     min-height: 100vh;
     margin-top: 67px;
+   
 }
 
 /* side bar*/
 .sidebar{
     background-color: var(--dark-blue);
+    position: fixed;
     color: #ffffff;
     height: 100vh;
     width: 300px;
     padding: 65px 0 0 0px;
     z-index: 1;
+    user-select: none;
 }
 .sidebar ul li{
     list-style: none;
@@ -140,11 +144,10 @@ section{
 }
 
 
-/* Mentor profile */
+/* Mentee Home */
 .mentor-profile{
-   
     background-color: #fff;
-    width: 70%;
+    width: 70vw;
     height: 16em;
     margin: 2em auto;
     border-radius: 1em;
@@ -200,6 +203,185 @@ section{
     background-position: center;
     margin: 4em auto 0 auto ;
 }
+/* ------------------ */
+/* mentee profile */
+
+.mentee-profile-box{
+    background-color: #fff;
+    width: 40vw;
+    margin: 10em auto;
+    position: relative;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+}
+.edit-profile{
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    color: var(--dark-blue);
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+.mentee-profile-box h1{
+    text-align: center;
+    color: var(--dark-blue);
+    border-radius: 0 0 20px 20px;
+    font-weight: 400;
+    width: max-content;
+    margin:3em auto 0 auto;
+    position: relative;
+    padding: 10px 0 0 0  ;
+}
+.pass-head{
+    position: absolute;
+    color: var(--dark-blue);
+    font-size: 2em;
+    font-weight: 600;
+    left: -1em;
+    top: -2.7em;
+}
+.title-desc{
+    color: var(--name-yellow);
+    font-style: italic;
+}
+.mentor-img_profile{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-circled-user-male-skin-type-3-96@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.key-value-profile{
+    padding: 2em 1em;
+    font-size: 14px;
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+}
+.left-key-profile{
+    color: var(--dark-blue);
+    
+}
+.right-value-profile{
+    font-weight: 300;
+    color: #969799;
+}
+.key-value-profile p{
+    margin-bottom: 1em;
+}
+/* Feedback */
+
+.feedback-wrapper{
+    background-color: rgb(255, 255, 255);
+    width: 40vw;
+    min-width: 550px;
+    margin: 8em auto ;
+    padding:0 0 1.5em 0;
+    position: relative;
+    border-radius: 1em;
+    text-align: center;
+    box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+}
+.feedback-head,.leftarrow{
+    color:var(--dark-blue);
+    position: absolute;
+    font-size: 2em;
+    font-weight: 600;
+    top: -2.5em;
+    left: -10%;
+}
+.feedback-topline{
+    color: var(--dark-blue);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -1.5em;
+}
+.feed-name{
+    color: var(--dark-blue);
+    padding: 10px;
+    
+    font-weight: 600;
+}
+.feed-name span{
+    color: var(--name-yellow);
+}
+.leftarrow{
+    cursor: pointer;
+    top: -1.3em;
+}
+.face-icon{
+    width: 180px;
+    position: absolute;
+    right: 5%;
+    top:2.5em;
+}
+.feedback-first h1{
+    position: relative;
+    margin-left: 1em;
+    top:2.5em;
+    font-size: 0.9em;
+    text-align: left;
+    color: var(--dark-blue);
+
+}
+.level-of-effort{
+    margin-top: 2.5em;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+.level-of-effort > div{
+    margin-left: 1em;
+    font-size: 0.9em;
+    color: var(--notify-text);
+}
+.level-of-effort p{
+    margin-bottom: 10px;
+}
+.round-ans{
+    margin-right: 5.5%;
+    min-width: 189px;
+}
+.round-ans span{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    margin:0 0 10px 19px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.round-ans span:hover{
+    background-color: rgb(85, 233, 85);
+}
+.submit-feedback-btn{
+    border: none;
+    cursor: pointer;
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 0.8em 3em;
+    border-radius: 500px;
+}
+textarea{
+    font-size: 0.9em;
+    resize: none;
+    min-width: 500px;
+    padding:  0.5em;
+    font-family: sans-serif;
+    border-radius: 1em;
+    border: 2px solid black;
+    margin :auto;
+   
+}
+/* -------------- */
+
 /* Notification bar */
 .hidden{
     display: block !important;
@@ -286,6 +468,60 @@ hr{
     color: var(--dark-blue);
     text-decoration: none;
 }
+/* ------------------ */
+/* right mentor details */
+.mentor-profile-right{
+    background-color: #fff;
+    position: fixed;
+    top: 67px;
+    right: 0;
+    bottom: 0;
+   box-shadow: 0 0 6px rgba(0, 0, 0, 0.226);
+}
+.mentor-profile-right h1{
+    background-color: var(--dark-blue);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    font-weight: 300;
+    padding: 15px 35px;
+    width: max-content;
+    margin: auto;
+}
+.mentor-img-right{
+    width: 200px;
+    height: 200px;
+    background-image: url(/jeecarnot-mentee-frontend/cdn/Assets/images/Untitled-0@2x.png) ;
+    background-position: 40% 45%;
+    background-size: 340%;
+    border-radius: 50%;
+    border: 3px solid rgb(236, 173, 57);
+    margin: 50px auto;
+}
+
+.mentor-profile-right p{
+    width: 300px;
+    color: var(--dark-blue);
+    margin: 0 0 18px 20px;
+}
+.mentor-profile-right span{
+    color: rgb(236, 173, 57);
+}
+.mentor-profile-right button{
+    border: none;
+    background-color: var(--dark-blue);
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin : 10px 0 0 80px; 
+}
+.call-btn-right a{
+    color: #fff;
+    text-decoration: none;
+}
+.mentor-profile-right button:hover{
+    background-color: rgb(78, 89, 233) ;
+}
 
 /* Creating responsive layout */
 @media only screen and (max-width: 1200px){
@@ -302,10 +538,39 @@ hr{
         margin-top: 4em;
         width: 85vw;
     }
+    .mentee-profile-box,.feedback-wrapper{
+        width: 60%;
+        margin-left: 3em;
+    }
+    .feedback-head,.leftarrow{
+        left: 0.5em;
+    }
+   
+}
+@media only screen and (max-width: 950px){
+    .mentor-profile-right{
+        display: none;
+    }
+    .mentee-profile-box,.feedback-wrapper{
+        width: 85vw;
+    }
 }
 @media only screen and (max-width: 600px){
     .mentor-profile{
         height: 24em;
+    }
+    .mentee-profile-box{
+       width: 85vw;
+       margin: auto;
+    }
+    .feedback-wrapper{
+        margin-left: 0;
+    }
+    .pass-head{
+        left: 0;
+    }
+    .mentor-profile-right{
+        display: none;
     }
     .mentor-center{
         padding: 1em 0 0 0;
