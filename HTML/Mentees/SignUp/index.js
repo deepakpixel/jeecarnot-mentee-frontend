@@ -11,8 +11,10 @@ const valid = document.querySelectorAll('.valid')
 document.querySelector('#otp').addEventListener('submit',e=>{
     e.preventDefault()
 })
-signupForm.addEventListener('submit',e=>{
+
+verifyPhn.addEventListener('submit',e=>{
     e.preventDefault()
+    
 })
 function showPassword(e){
     if (e.parentElement.children[0].type === "password") {
@@ -79,13 +81,47 @@ verifyPhn.addEventListener('click', e =>{
     if(error){
         return
     }
-
+    sendotp();
  // show popup
+    const data = {
+        name : signupInput[0].value,
+        email : signupInput[2].value,
+        password : signupInput[3].value,
+        phone : signupInput[1].value,
+       
+    }
+    document.getElementById("otpPhone").textContent=`+91-${data.phone}`
+    
+   
+    // const sendotpUrl = "https://mentee.jeecarnot.com/register/api/send-otp"
+   
+    async function sendotp(){
+        const firstRes = await fetch("https://mentee.jeecarnot.com/register/api/send-otp",{
+            method : "POST",
+            
+            headers: {
+                "Content-Type": "application/json"
+            },
+           
+            body : JSON.stringify({
+                name : signupInput[0].value,
+                email : signupInput[2].value,
+                phone : signupInput[1].value,
+                password : signupInput[3].value,
+            }) 
+       })
+       let res = await firstRes.json();
+       console.log(firstRes);
+       console.log(res);
+    }
+      
+    
+    console.log(data)
     popup.classList.add('popup-visible')
     timerFunction(61)
-    document.querySelectorAll('#signupForm .inp').forEach(e=>{
-        e.value = ""
-    })
+    // document.querySelectorAll('#signupForm .inp').forEach(e=>{
+    //     e.value = ""
+    // })
     document.querySelectorAll('#otp input').forEach(e=>{
         e.value = ""
     })

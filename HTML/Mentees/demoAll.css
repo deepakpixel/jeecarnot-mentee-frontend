@@ -14,8 +14,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box !important;
-    outline: none !important;
-   
+    outline: none;
+    border: none;
+    
 }
 
 body,html{
@@ -381,7 +382,57 @@ textarea{
    
 }
 /* -------------- */
+/* Study Material */
+    .mentee-studyMaterial{
+        width: 40vw;
+        margin: 8em auto ;
+        padding:0 0 1.5em 0;
+        /* position: relative; */
+        /* box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267); */
+    }
+    .sm-top-head{
+        position: absolute;
+        top: -90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sm-top-head  h1:first-child {
+        position: absolute;
+        left: -5em;
+        color: var(--dark-blue);
+    }
+    .sm-top-head  h1:last-child {
+        font-size: 1em;
+        color: var(--dark-blue);
+    }
+    .req-btn{
+        display: flex;
+        min-width: 300px;
+        left: 0;
+    }
+    .sm-top-head button{
+        cursor: pointer;
+        background-color: #fff;
+        padding: 0.7em 2em;
+        border-radius: 200px;
+        border:2px solid var(--dark-blue);
+        color: var(--dark-blue);
+        margin: 0px 10px;
+    }
+    .sm-top-head button:hover{
+        background-color: var(--dark-blue);
+        color: #fff;
+    }
+    .issued-material{
+        border-radius: 1em;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+    }
 
+
+/* -------------- */
 /* Notification bar */
 .hidden{
     display: block !important;

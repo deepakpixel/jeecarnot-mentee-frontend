@@ -18,7 +18,7 @@
     transition: 0.1s;
 }
 body,html{
-    font-family: 'Roboto' , sans-serif !important;
+    font-family: 'Roboto' , sans-serif;
 }
 .wrapper{
     display: flex;
@@ -94,14 +94,14 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     margin: 0.5em 0;
 }
-input[type="submit"]{
+input[type="button"]{
     width:15em;
     padding: 0.7em 1em;
     background-color: var(--dark-blue);
     color: #fff;
     cursor: pointer;
 }
-input[type="submit"]:hover{
+input[type="button"]:hover{
     background-color: var(--hover);
 }
 .para{
