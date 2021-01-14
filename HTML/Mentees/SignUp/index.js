@@ -96,7 +96,7 @@ verifyPhn.addEventListener('click', e =>{
     // const sendotpUrl = "https://mentee.jeecarnot.com/register/api/send-otp"
    
     async function sendotp(){
-        const firstRes = await fetch("https://mentee.jeecarnot.com/register/api/send-otp",{
+        const firstRes = await fetch("http://mentee.jeecarnot.com/register/api/send-otp",{
             method : "POST",
             
             headers: {

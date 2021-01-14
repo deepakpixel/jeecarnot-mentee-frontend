@@ -70,16 +70,13 @@
 
         <div class="mentee-studyMaterial">
 
-            <div class="sm-top-head">
-                <h1 class="smtop-name">Study Material </h1>
-                <div class="req-btn">
+            <div class="issued-material">
+                <div class="top-part">
+                    <h1>Study Material</h1>
                     <button>Request Material</button>
                     <button>Past Requests</button>
+                    <p>Issued Material -</p>
                 </div>
-                <h1 class="issued-mat ">Issued Material - </h1>
-            </div>
-
-            <div class="issued-material">
                 <div class="subjects">
                     <div class="subject-name">
                         <p>Physics</p>
@@ -128,6 +125,73 @@
             </div>
         </div>
 
+
+        <!-- Summary popup -->
+        <div class="sm-summary">
+            <div class="summary-head">
+                <i class="fas fa-arrow-left"></i>
+                <p>Summary</p>
+                <i class="fas fa-times-circle" onclick="handleQuit()"></i>
+            </div>
+            <div class="summ-list">
+                <div class="sm-list1">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="icon">
+                    <div class="sm-topics">
+                        <p>Subject - <span>Physics</span></p>
+                        <p>Chapter - <span>Electrostatic</span></p>
+                        <p>Theory - <span>Theory</span></p>
+                    </div>
+                    <i class="fas fa-trash"></i>
+                </div>
+                <div class="sm-list1">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="icon">
+                    <div class="sm-topics">
+                        <p>Subject - <span>Physics</span></p>
+                        <p>Chapter - <span>Electrostatic</span></p>
+                        <p>Theory - <span>Theory</span></p>
+                    </div>
+                    <i class="fas fa-trash" ></i>
+                </div>
+            </div>
+            <div class="sm-btn">
+                <button>Add more</button>
+                <button>Submit</button>
+            </div>
+        </div>
+
+        <!-- Subject popup -->
+        <div class="sub-popup">
+            <div class="sub-p-head">
+                <p>Subject</p>
+                <i class="fas fa-times-circle " onclick="handleQuit()"></i>
+            </div>
+            <div class="sub-p-name">
+                <div class="sub-p-phy">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="img">
+                    <p>Physics</p>
+                </div>
+                <div class="sub-p-che">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-lab-items-100 (1)@2x.png" alt="img">
+                    <p>Chemistry</p>
+                </div>
+                <div class="sub-p-mas">
+                    <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-sigma-100 (1)@2x.png" alt="img">
+                    <p>Maths</p>
+                </div>
+            </div>
+        </div>
+        <!-- Chapter -->
+        <!-- <div class="sm-chapter">
+            <div class="chapter-head">
+                <i class="fas fa-arrow-left"></i>
+                <p>Chapter</p>
+                <i class="fas fa-times-circle" onclick="handleQuit()"></i>
+            </div>
+            <div class="chapter-content">
+                <p>Physics > Electrostatics </p>
+            </div>
+        </div> -->
+        <!-- ----------- -->
         <div class="mentor-profile-right">
             <h1>
                 Your Mentor
@@ -148,6 +212,6 @@
 
     </section>
    
-    <script src="../profileMentee.js"></script>
+    <script src="sm.js"></script>
 </body>
 </html>

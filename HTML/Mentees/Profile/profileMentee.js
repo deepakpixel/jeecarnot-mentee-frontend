@@ -1,10 +1,4 @@
-// let notify_Number = 19
-// if(notify_Number > 0){
-//     document.styleSheets[0].addRule('#alert::before',`content: "${notify_Number}" `)
-// }
-// else{
-//     document.styleSheets[0].addRule('#alert::before',`display: "none" `)
-// }
+
 
 const bar = document.querySelector('.bar');
 const sidebar = document.querySelector('.sidebar')
