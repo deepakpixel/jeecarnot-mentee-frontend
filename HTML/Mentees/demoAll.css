@@ -564,6 +564,90 @@ textarea{
 .sub-p-name > div:hover{
     border: 3px solid var(--dark-blue);
 }
+
+/* Account */
+
+.mentee-account{
+    background-color: #fff;
+    height: 260px;
+    margin: 8em auto;
+    position: relative;
+    border-radius: 1em;
+    min-width: 450px;
+}
+.acc-name-head{
+    position: absolute;
+    top: -1.5em;
+    left: -1em;
+    color: var(--dark-blue);
+    font-size: 2em;
+}
+.account-head{
+    display: flex;
+    border-radius: 1em 1em 0 0;
+    overflow: hidden;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.158);
+    justify-content: space-evenly;
+}
+.account-head p{
+    color: var(--dark-blue);
+    cursor: pointer;
+    padding: 0.7em 0.3em;
+    text-align: center;
+    width: 170px;
+    background-color: #fff;
+
+}
+.account-head p:hover{
+    color: #fff;
+    background-color: var(--dark-blue);
+}
+.mem-key-value{
+    display: flex;
+    font-size: 14px;
+}
+.mem-head{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0.5em;
+    color: var(--dark-blue);
+}
+.mem-key-value p{
+    margin: 10px;
+}
+.mem-left{
+    color: var(--dark-blue);
+    margin: 0 1em 0 2em;
+}
+.mem-right{
+    color: var(--date);
+}
+.extend-mem{
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5em 2em;
+    background-color: var(--dark-blue);
+    border-radius: 100px;
+    margin-left: 50%;
+    margin-top: 15px;
+    transform: translate(-50%);
+}
+.extend-mem:hover{
+    background-color: rgb(104, 78, 255);
+}
+.acc-active{
+    display: none;
+}
+.acc-pass-input{
+    display: flex;
+    flex-direction: column;
+}
+.acc-pass-input input{
+    border-radius: 5px;
+    margin-top: 6px;
+    padding: 2px 10px;
+    border: 2px solid var(--dark-blue);
+}
 /* -------------- */
 /* Notification bar */
 .hidden{
@@ -721,7 +805,7 @@ hr{
         margin-top: 4em;
         width: 85vw;
     }
-    .mentee-studyMaterial{
+    .mentee-studyMaterial,.mentee-account{
         margin: 9em 0 0 5em;
         width: 500px;
     }
@@ -748,6 +832,10 @@ hr{
     .mentee-profile-box,.feedback-wrapper{
         width: 85vw;
     }
+    .mentee-account{
+        width: 70vw;
+        margin:10em auto;
+    }
 }
 @media only screen and (max-width: 600px){
     .mentor-profile{
@@ -766,7 +854,7 @@ hr{
     .feedback-wrapper{
         margin-left: 0;
     }
-    .pass-head{
+    .pass-head,.acc-name-head{
         left: 0;
     }
     .mentor-profile-right{
