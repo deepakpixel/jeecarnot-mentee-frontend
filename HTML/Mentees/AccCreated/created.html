@@ -3,68 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Account Created</title>
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <!-- <script src="../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script> -->
 </head>
 <body>
     <div class="wrapper">
         <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/signUpSvg.bmp" class="svg" >
+
         <div class="content">
-
             <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright.png" alt="logo" class="logo">
+            <i class="fas fa-check-circle"></i>
 
-            <h1>Sign Up</h1>
-            <form method="POST" id="signupForm" autocomplete="off" novalidate>
+            <h1>Account Created !</h1>
+            <p class="complete-prof">Complete Your Profile <i class="fas fa-chevron-right"></i></p>
+            <!-- <form method="POST" id="LoginForm" autocomplete="off" novalidate>
                 
-                <div class="namefield">
-                    <input type="text" name="name" class="inp name" placeholder="Name" autofocus >
-                    <p class="required">Required</p>
-                    <i class="fas fa-user icon"></i>
-                </div>
-                <div class="phonefield">
-                    <input type="text" name="phone" class="inp phone" placeholder="Phone Number" maxlength="10">
-                    <p class="required">Required</p>
-                    <p class="valid">Phone number invalid</p>
-                    <i class="fas fa-phone-alt icon"></i>
-                </div>
                 <div class="emailfield">
-                    <input type="text" name="email" class="inp email" placeholder="Email ID" >
-                    <p class="required">Required</p>
-                    <p class="valid">Email id invalid</p>
+                    <input type="text" name="email" class="inp email" placeholder="Email ID" autofocus>
+                   
+                    <p class="valid"></p>
                     <i class="fas fa-envelope icon"></i>
                     
                 </div>
                 <div class="passfield">
                     <input type="password" name="password" class="inp pass" placeholder="Password" >
-                    
-                    <p class="required">Required</p>
+                    <p class="valid">Required</p>
                     <i class="fas fa-lock icon"></i>
                     <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
                 </div>
-                <div class="confirmfield">
-                    
-                    <input type="password" name="confirm-pass" class="inp con-pass" placeholder="Confirm password" >
-                    <p class="required">Required</p>
-                    <p>Enter same password</p>
-                    <i class="fas fa-lock icon"></i>
-                    <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
-                </div>
-                <input type="button" value="Verify phone number" class="verify-phn">
+                <a href="forgot" class="forgot-p">Forgot Password?</a>
+                <input type="button" value="Login" class="verify-phn">
             </form>
-            <p class="para">Already have an account? <a href="../Login/login.html">Login</a></p>
+            <p class="para">Don't have an account? <a href="../SignUp/signup.html">Sign Up</a></p> -->
 
-             <p class="Or-Line">OR</p>
+             <!-- <p class="Or-Line">OR</p>
 
              <div class="otherlogin">
                 <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/facebook.png" alt="" width="35px"></a>
                 <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/google-icon.png" alt="" width="35px"></a>
                 <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/linkedin.jpg" alt="" width="32px"></a>
-             </div>
+             </div> -->
         </div>
     </div>
-    <div class="popup">
+    <!-- <div class="popup">
 
         <h1>OTP Verification</h1>
         <p>Enter the OTP sent to: <span id="otpPhone"></span></p>
@@ -80,7 +62,7 @@
         <p>Didn't receive the OTP? <a href="" class="resend">Resend OTP  <span class="timer"></span></a></p>
         
         <input type="button" class="verify-otp" value="Verify and Proceed">
-    </div>
+    </div> -->
     <script src="index.js"></script>
 </body>
 </html>

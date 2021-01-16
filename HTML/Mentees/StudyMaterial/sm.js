@@ -24,9 +24,7 @@ window.addEventListener('resize',(e)=>{
        document.querySelector(".ham").classList.add("fa-bars")
        bar.classList.remove('bar-transform')
     }
-  
 })
-
 
 
 const bell = document.querySelector(".bell")
