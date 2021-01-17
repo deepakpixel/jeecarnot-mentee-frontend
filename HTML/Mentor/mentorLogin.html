@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/jeecarnot-mentee-frontend/HTML/Mentees/Login/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/signUpSvg.bmp" class="svg" >
+        <div class="content">
+
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright.png" alt="logo" class="logo">
+            <i class="fas fa-user-circle"></i>
+            <h1>Mentor Login</h1>
+            <form method="POST" id="LoginForm" autocomplete="off" novalidate="true">
+                
+                <div class="emailfield">
+                    <input type="text" name="email" class="inp email" placeholder="Email ID" autofocus>
+                   
+                    <p class="valid"></p>
+                    <i class="fas fa-envelope icon"></i>
+                    
+                </div>
+                <div class="passfield">
+                    <input type="password" name="password" class="inp pass" placeholder="Password" >
+                    <p class="valid">Required</p>
+                    <i class="fas fa-lock icon"></i>
+                    <i onclick="showPassword(this)" class="fas fa-eye icon"></i>
+                </div>
+                <a href="forgot" class="forgot-p">Forgot Password?</a>
+                <input type="button" value="Login" class="verify-phn">
+            </form>
+            <p class="para">Don't have an account? <a href="../SignUp/signup.html">Sign Up</a></p>
+
+             <!-- <p class="Or-Line">OR</p>
+
+             <div class="otherlogin">
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/facebook.png" alt="" width="35px"></a>
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/google-icon.png" alt="" width="35px"></a>
+                <a href=""><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/linkedin.jpg" alt="" width="32px"></a>
+             </div> -->
+        </div>
+    </div>
+   
+    <script src="/jeecarnot-mentee-frontend/cdn/Assets/js/mentorLogin.js" ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+</body>
+</html>

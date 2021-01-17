@@ -36,9 +36,6 @@ loginInputs.forEach(e=>{
                pass.parentElement.children[1].textContent = "Password must be more than 6 characters!"
            }
         }
-        
-
-        console.log("in",error)
     })
 })
 const loginBtn = document.querySelector(".verify-phn")
@@ -51,7 +48,41 @@ loginBtn.addEventListener("click",evt=>{
         }
     })
     if(!error){
-        console.log("can be submitted")
+         loginBtn.disabled = true
+         loginBtn.style.cursor = "not-allowed"
+         fetch("https://mentor.jeecarnot.com/login",{
+             method : "POST",
+             headers : {
+
+                 "Content-type" : "application/json"
+             },
+             body : JSON.stringify({
+                 email : email.value,
+                 password : pass.value,
+             })
+         })
+         .then(res => {
+             console.log(res)
+             loginBtn.disabled = false
+             loginBtn.style.cursor = "pointer"
+             return res.json()
+        })
+         .then(data => {
+             console.log("data:",data)
+             if (data.type == "success") {
+                window.location.href = "https://mentor.jeecarnot.com/dashboard";
+             }
+             else{
+                 swal(
+                     "Error !",
+                     "Incorrect Credentials",
+                     "warning"
+                 )
+             }
+        })
+         .catch(err=> {
+            console.log("err:",err);
+        })
     }
 })
 

@@ -106,7 +106,7 @@ header{
 }
 section{
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin-top: 67px;
 }
 
@@ -747,7 +747,7 @@ hr{
         /* margin-top: 4em;
         width: 85vw; */
         width: 60vw;
-        margin: 10em 0 2em 2em;
+        margin: 5em 0 0em 2em;
     }
 }
 @media only screen and (max-width: 900px){
@@ -759,7 +759,7 @@ hr{
        display: none;
    }
    .mentor-profile{
-      margin: 2em auto;
+      margin: 5em auto;
       width: 85vw;
       padding:0 0 1em 0;
    }
