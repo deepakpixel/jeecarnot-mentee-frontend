@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../demoAll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Payment</title>
+</head>
+<style>
+    .checked{
+        background-color:  #09206F;
+        color: #fff;
+        border: none !important;
+    }
+    .current-box{
+        color: #09206F;
+        border:3px solid #09206F;
+    }
+</style>
+<body>
+    <header>
+        <div id="logo" class="c-p-header">
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright@2x.png" alt="logo">
+        </div>
+        <a class="logout-text" href="#">
+            Logout
+        </a>
+    </header>
+    <div class="mentee-c-p-wrapper">
+
+        <h1 class="c-p-head">Complete Your Profile</h1>
+
+        <div class="box-below">
+            <div class="c-p-number">
+                <div class="c-p-one c-p-current">
+                    <p class="c-p-box-circle checked">
+                        <i class="fas fa-check"></i>
+                    </p>
+                    <p class="c-p-innerhead">Personal Details</p>
+                </div>
+                <line></line>
+                <div class="c-p-two">
+                    <p class="c-p-box-circle checked">  <i class="fas fa-check"></i></p>
+                    <p>Plan Selection</p>
+                </div>
+                <line></line>
+                <div class="c-p-three">
+                    <p class="c-p-box-circle current-box">3</p>
+                    <p>Payment</p>
+                </div>
+                <line></line>
+                <div class="c-p-four">
+                    <p class="c-p-box-circle">4</p>
+                    <p>Finish</p>
+                </div>
+            </div>
+    
+            <div class="c-p-details-form">
+                <h1>Payment</h1>
+                <form class="c-p-details-inputs" novalidate autocomplete="off">
+                    <div>
+                        <p>Name :</p>
+                        <p>Rahul</p>
+                    </div>
+                    <div>
+                        <p>Email :</p>
+                        <p>rahul@gmail.com</p>
+                    </div>
+                    <div>
+                        <p>Phone :</p>
+                        <p>+91-87878787878</p>
+                    </div>
+                    <div>
+                        <p>Plan :</p>
+                        <p>
+                            <input type="text">
+                        </p>
+                    </div>
+                    <div>
+                        <p>Price :</p>
+                        <p>
+                            <input type="text">
+                        </p>
+                    </div>
+                    <div>
+                        <p>Promo code :</p>
+                        <p>
+                            <input type="text">
+                        </p>
+                    </div>
+                    
+    
+                </form>
+
+            </div>
+            <div class="c-p-buttons">
+                <button>Pay</button>
+                <button>Skip</button>
+            </div>
+        </div>
+       
+
+    </div>
+
+</body>
+</html>

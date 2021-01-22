@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.6/dist/sweetalert2.all.min.js" defer></script>
+    <link rel="stylesheet" href="newCheckout.css">
+    <title>Checkout</title>
+    <!-- <script src="index.js" defer></script> -->
+</head>
+<body>
+
+    <header>
+        <div id="logo">
+            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/LOGO bright@2x.png" alt="logo">
+        </div>
+    </header>
+
+    <div class="content">
+
+        <h1>Checkout Form</h1>
+
+        <div class="main box">
+            <form method="POST" action="https://sandboxsecure.payu.in/_payment" id="payment_form" novalidate autocomplete="off">
+
+                <input type="text" name="firstname" id="name" placeholder="Name" autofocus required>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <br>
+                <input type="text" name="phone" id="phone" placeholder="Phone" required>
+                <br>
+
+                <!--Hidden -->
+
+                    <input type="hidden" id="surl" name="surl" value="https://pay.jeecarnot.com/status" />
+
+                    <input type="hidden" id="surl" name="furl" value="https://pay.jeecarnot.com/status" />
+
+                    <input type="hidden" id="key" name="key" placeholder="Merchant Key" value="Gcmwi5eM" />
+
+                    <input type="hidden" name="service_provider" value="payu_paisa">
+                    
+                    <input type="text" hidden id="txnid" name="txnid" placeholder="Transaction ID" value="000" />
+                    <input type="hidden" id="productinfo" name="productinfo" placeholder="Product Info" value="000" />
+                    <input type="text" id="amount" name="amount" placeholder="Amount" hidden />
+
+                    <input type="text" id="hash" name="hash" placeholder="Hash" hidden />
+        
+           
+            
+            <h2>Plan Selection</h2>
+            <div class="plans">
+
+                <div class="plan-box one" data-id="1">
+                    <h1 class="plan-name">
+                        <p class="top-tag-left">Hero</p>
+                        <p class="top-tag-right">Most popular </p>
+                    </h1>
+                        
+                   
+                    <div class="price">
+                        <div class="valid-no-top">3</div>
+                        <div class="month">Months</div>
+                        <div class="per-month">799/month</div>
+                        <div class="save">Save 20%</div>
+                        <div class="pricing">
+                            <h4 class="max-price">Rs 3000</h4>
+                            <h4 class="real-price">Rs 2399</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-box one" data-id="2">
+                    <h1 class="plan-name">
+                        <p class="top-tag-left">Superhero</p>
+                        <p class="top-tag-right">Exclusive for JEE Mains 2021 </p>
+                    </h1>
+                    <div class="price">
+                        <div class="valid-no-top">3</div>
+                        <div class="month">Months</div>
+                        <div class="per-month">799/month</div>
+                        <div class="save">Save 20%</div>
+                        <div class="pricing">
+                            <h4 class="max-price">Rs 3000</h4>
+                            <h4 class="real-price">Rs 2399</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-box one" data-id="3">
+                    <h1 class="plan-name">
+                        <p class="top-tag-left">Ultimate</p>
+                        <p class="top-tag-right"> Best for Advanced 2021</p>
+                    </h1>
+                        
+                   
+                    <div class="price">
+                        <div class="valid-no-top">3</div>
+                        <div class="month">Months</div>
+                        <div class="per-month">799/month</div>
+                        <div class="save">Save 20%</div>
+                        <div class="pricing">
+                            <h4 class="max-price">Rs 3000</h4>
+                            <h4 class="real-price">Rs 2399</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="plan-box one" data-id="4">
+                    <h1 class="plan-name">
+                        <p class="top-tag-left">Supreme</p>
+                        <p class="top-tag-right">Best Value </p>
+                    </h1>
+                        
+                   
+                    <div class="price">
+                        <div class="valid-no-top">3</div>
+                        <div class="month">Months</div>
+                        <div class="per-month">799/month</div>
+                        <div class="save">Save 20%</div>
+                        <div class="pricing">
+                            <h4 class="max-price">Rs 3000</h4>
+                            <h4 class="real-price">Rs 2399</h4>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <p class="consent">
+                By proceeding you agree to JEECarnot's
+                <a href="terms.html">terms of service</a> and
+                <a href="privacy.html">privacy policy.</a>
+            </p>
+
+            <style>
+                .consent a {
+                    text-decoration: none;
+                    color: var(--dark-blue);
+                }
+                .consent {
+                    margin-bottom: 1em;
+                    font-size: 0.8em;
+                }
+            </style>
+            <button type="button" id="paybtn" class="submit" >Proceed to Checkout</button>
+            <button type="submit" id="proceed" hidden class="submit" form="payment_form" >Submit</button>
+        </form>
+        </div>
+    </div>
+
+</body>
+</html>

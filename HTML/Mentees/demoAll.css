@@ -13,7 +13,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box !important;
+    box-sizing: border-box ;
     outline: none;
     border: none;
     
@@ -370,7 +370,7 @@ section{
     padding: 0.8em 3em;
     border-radius: 500px;
 }
-textarea{
+.level-of-effort textarea{
     font-size: 0.9em;
     resize: none;
     min-width: 500px;
@@ -789,6 +789,143 @@ hr{
 .mentor-profile-right button:hover{
     background-color: rgb(78, 89, 233) ;
 }
+/* --------- */
+/* Complete your profile */
+.c-p-header{
+    margin: 7px 0;
+}
+.logout-text{
+    color: var(--dark-blue);
+    text-decoration: none;
+    margin: 1em 2em;
+}
+.mentee-c-p-wrapper{
+    margin-top: 67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.c-p-head{
+    color: var(--dark-blue);
+    margin: 1.5em 0;
+}
+.box-below{
+    background-color: #fff;
+    padding: 2em 8em;
+    margin-bottom: 50px; 
+    box-shadow:  0 3px 4px 2px rgba(0, 0, 0, 0.082);
+}
+.c-p-number{
+    
+    display: flex;
+    text-align: center;
+    width: 500px;
+    user-select: none;
+}
+.c-p-number p:last-child{
+    font-size: 12px;
+}
+.c-p-number div{
+    color: var(--date);
+    display: flex;
+    flex-direction: column;
+    /* margin: 1em; */
+    align-items: center;
+}
+.c-p-number line{
+    width: 100px;
+    height: 2px;
+    background-color: var(--date);
+    margin: 1.5em 0.8em;
+}
+.c-p-one p:first-child{
+    border: 3px solid ;
+}
+.c-p-current{
+    color: var(--dark-blue) !important;
+    color: var(--dark-blue);
+}
+.c-p-box-circle{
+    background-color:#fff;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow:  0 3px 5px 2px rgba(0, 0, 0, 0.123);
+}
+.c-p-details-form h1{
+    font-size: 1.2em;
+    margin: 1em 0;
+    margin-left: 50%;
+}
+.c-p-details-form{
+    color: var(--dark-blue);
+    width: 400px;
+    min-width: 400px;
+}
+.c-p-details-inputs > div{
+    margin: 1.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.c-p-details-inputs >div p:last-child{
+    position: absolute;
+    left: 50%;
+    color: var(--notify-text);
+}
+.c-p-details-inputs >div p:first-child{
+    width: 200px;
+}
+.c-p-details-inputs input[type="text"]{
+    box-sizing: border-box;
+    padding: 5px 40px 5px 10px;
+    width: 120%;
+    border-radius: 200px;
+    background-color: rgb(233, 233, 233);
+}
+.mop-options_one, .mop-options_two{
+    display: flex;
+    position: relative;
+    left: 10%;
+    
+}
+.mop-options_one div,.mop-options_two div{
+    margin: 3px;
+}
+.fa-chevron-down{
+    position: absolute;
+    cursor: pointer;
+    top:50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+.text-area{
+   margin: 3em 0 !important;
+}
+.text-area  textarea {
+    border: none;
+    resize: none;
+    border-radius: 1em;
+    padding:0.2em 0.5em;
+    width: 250px !important;
+    background-color: rgb(233, 233, 233);
+    font-family: sans-serif;
+}
+.c-p-buttons{
+    text-align: center;
+}
+.c-p-buttons button{
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    background-color: var(--dark-blue);
+    width: 120px;
+    height: 40px;
+    border-radius: 200px;
+}
 
 /* Creating responsive layout */
 @media only screen and (max-width: 1200px){
@@ -836,6 +973,10 @@ hr{
         width: 70vw;
         margin:10em auto;
     }
+    .box-below{
+        padding: 2em;
+    }
+  
 }
 @media only screen and (max-width: 600px){
     .mentor-profile{
@@ -875,6 +1016,15 @@ hr{
         width: 90vw ;
         margin: auto;
     }
+    
+    .mentee-c-p-wrapper{
+        margin:-8em auto;
+        transform: scale(0.72);
+    }
+    body{
+        height: 0vh;
+    }
+   
 }
 @media only screen and (max-width: 400px){
     .sub-topics{

@@ -33,7 +33,7 @@ loginInputs.forEach(e=>{
            if(pass.value.length < 6){
                error = true
                pass.parentElement.children[1].style.display = "block"
-               pass.parentElement.children[1].textContent = "Password must be more than 6 characters!"
+               pass.parentElement.children[1].textContent = "Password must be more than 5 characters!"
            }
         }
     })
@@ -45,12 +45,14 @@ loginBtn.addEventListener("click",evt=>{
     loginInputs.forEach(e=>{
         if(/^\s*$/.test(e.value)){
             error = true;
+            e.parentElement.children[1].style.display = "block"
+            e.parentElement.children[1].textContent = "Required"
         }
     })
     if(!error){
          loginBtn.disabled = true
          loginBtn.style.cursor = "not-allowed"
-         fetch("https://mentor.jeecarnot.com/login",{
+         fetch("https://localhost:4444/login",{
              method : "POST",
              headers : {
 
@@ -75,7 +77,7 @@ loginBtn.addEventListener("click",evt=>{
              else{
                  swal(
                      "Error !",
-                     "Incorrect Credentials",
+                     data.msg,
                      "warning"
                  )
              }
