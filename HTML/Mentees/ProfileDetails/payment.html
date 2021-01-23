@@ -8,14 +8,15 @@
     <title>Payment</title>
 </head>
 <style>
-    .checked{
-        background-color:  #09206F;
-        color: #fff;
-        border: none !important;
+    .promo-code{
+        width: 120px !important;
     }
-    .current-box{
-        color: #09206F;
-        border:3px solid #09206F;
+    .apply-btn{
+        color: #fff;
+        background-color: rgb(107, 107, 107);
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
     }
 </style>
 <body>
@@ -27,11 +28,15 @@
             Logout
         </a>
     </header>
-    <div class="mentee-c-p-wrapper">
+    <div class="mentee-c-p-wrapper m-c-p-payment">
 
         <h1 class="c-p-head">Complete Your Profile</h1>
 
         <div class="box-below">
+            <div class="c-p-previus">
+
+                <i class="fas fa-arrow-left"></i>
+            </div>
             <div class="c-p-number">
                 <div class="c-p-one c-p-current">
                     <p class="c-p-box-circle checked">
@@ -42,12 +47,12 @@
                 <line></line>
                 <div class="c-p-two">
                     <p class="c-p-box-circle checked">  <i class="fas fa-check"></i></p>
-                    <p>Plan Selection</p>
+                    <p class="done-text">Plan Selection</p>
                 </div>
                 <line></line>
                 <div class="c-p-three">
                     <p class="c-p-box-circle current-box">3</p>
-                    <p>Payment</p>
+                    <p class="done-text">Payment</p>
                 </div>
                 <line></line>
                 <div class="c-p-four">
@@ -64,29 +69,30 @@
                         <p>Rahul</p>
                     </div>
                     <div>
-                        <p>Email :</p>
-                        <p>rahul@gmail.com</p>
-                    </div>
-                    <div>
                         <p>Phone :</p>
                         <p>+91-87878787878</p>
                     </div>
                     <div>
+                        <p>Email :</p>
+                        <p>rahul@gmail.com</p>
+                    </div>
+                    <div>
                         <p>Plan :</p>
                         <p>
-                            <input type="text">
+                            <span>GOLD</span> <a href="#">change plan</a><span>(Validity : 6 months)</span>
                         </p>
                     </div>
                     <div>
                         <p>Price :</p>
                         <p>
-                            <input type="text">
+                            Rs. 3799
                         </p>
                     </div>
                     <div>
-                        <p>Promo code :</p>
+                        <p>Apply promo code :</p>
                         <p>
-                            <input type="text">
+                            <input class="promo-code" type="text">
+                            <button class="apply-btn">Apply</button>
                         </p>
                     </div>
                     

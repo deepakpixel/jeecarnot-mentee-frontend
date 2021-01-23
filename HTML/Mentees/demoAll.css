@@ -109,7 +109,7 @@ header{
 }
 section{
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin-top: 67px;
    
 }
@@ -804,13 +804,14 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
- 
+    min-width: 444px;
 }
 .c-p-head{
     color: var(--dark-blue);
     margin: 1.5em 0;
 }
 .box-below{
+    position: relative;
     background-color: #fff;
     padding: 2em 8em;
     margin-bottom: 50px; 
@@ -855,7 +856,7 @@ hr{
     border-radius: 50%;
     box-shadow:  0 3px 5px 2px rgba(0, 0, 0, 0.123);
 }
-.c-p-details-form h1{
+.c-p-details-form > h1{
     font-size: 1.2em;
     margin: 1em 0;
     margin-left: 50%;
@@ -875,9 +876,11 @@ hr{
     position: absolute;
     left: 50%;
     color: var(--notify-text);
+    
 }
 .c-p-details-inputs >div p:first-child{
-    width: 200px;
+    width: 190px;
+    margin-left: 1em;
 }
 .c-p-details-inputs input[type="text"]{
     box-sizing: border-box;
@@ -922,9 +925,114 @@ hr{
     cursor: pointer;
     margin: 10px;
     background-color: var(--dark-blue);
-    width: 120px;
+    width: 130px;
     height: 40px;
+    padding: 0 10px;
     border-radius: 200px;
+}
+/* plans */
+.c-p-planbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:1em ;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0 3em 0;
+}
+.plan-name{
+    font-size: 18px;
+    background-color: var(--dark-blue);
+    color: #fff;
+    font-weight: 300;
+    padding: 0.6em ;
+    text-align: center;
+}
+.c-p-planbox >div{
+    background-color: #fff;
+    border-radius: 1em ;
+    cursor: pointer;
+    overflow: hidden;
+    width: 200px;
+    height: 170px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.178);
+}
+.checked{
+    background-color:  #09206F;
+    color: #fff;
+    border: none !important;
+}
+.current-box{
+    color: #09206F;
+    border:3px solid #09206F;
+}
+.done-text{
+    color: #09206F;
+}
+.c-p-boxBelow{
+   background-color: #fff;
+   width: 1000px;
+   display: grid;
+   padding: 1em 0;
+   place-items: center;
+   text-align: center;
+   position: relative;
+}
+.price{
+   padding: 1em;
+}
+.c-p-previus{
+    color: var(--dark-blue);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.c-p-plan-head{
+   font-size: 20px;
+   margin: 1em 0;
+   font-weight: 600;
+}
+.price p span{
+    text-decoration: line-through;
+}
+.price p:nth-child(1){
+font-size: 13px;
+color: var(--date);
+}
+.price p:nth-child(2){
+color: var(--dark-blue);
+font-size: 1.3em;
+margin-bottom: 1em;
+}
+.price p:nth-child(3){
+color: var(--mid-gray);
+font-size: 14px;
+}
+.price p:nth-child(4){
+font-size: 13px;
+color: var(--mid-gray);
+}
+.validity{
+    color: var(--date) !important;
+}
+.plan-box:hover{
+    border-left: 3px solid var(--dark-blue);
+    border-right: 3px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+}
+.clicked-plan{
+    border-left: 3px solid var(--dark-blue);
+    border-right: 3px solid var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+    background-color: rgb(221, 236, 255);
+}
+.txt-id{
+    color: var(--date);
+}
+.c-p-svg{
+    width: 400px
+    
 }
 
 /* Creating responsive layout */
@@ -974,7 +1082,13 @@ hr{
         margin:10em auto;
     }
     .box-below{
-        padding: 2em;
+        padding: 2em ;
+    }
+    .c-p-planbox{
+        grid-template-columns: 1fr 1fr;
+    }
+    .c-p-boxBelow{
+        width:600px ;
     }
   
 }
@@ -1020,6 +1134,9 @@ hr{
     .mentee-c-p-wrapper{
         margin:-8em auto;
         transform: scale(0.72);
+    }
+    .m-c-p-payment,.mentee-c-p-plan{
+        margin-top: -2em;
     }
     body{
         height: 0vh;
