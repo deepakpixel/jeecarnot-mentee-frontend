@@ -81,7 +81,9 @@ verifyPhn.addEventListener('click', e =>{
     if(error){
         return
     }
+
     sendotp();
+    
  // show popup
     const data = {
         name : signupInput[0].value,
@@ -93,10 +95,11 @@ verifyPhn.addEventListener('click', e =>{
     document.getElementById("otpPhone").textContent=`+91-${data.phone}`
     
    
-    // const sendotpUrl = "https://mentee.jeecarnot.com/register/api/send-otp"
-   
     async function sendotp(){
-        const firstRes = await fetch("http://mentee.jeecarnot.com/register/api/send-otp",{
+        verifyPhn.disabled = true
+        verifyPhn.style.cursor = "not-allowed"
+        verifyPhn.value = "Sending..."
+        const firstRes = await fetch("https://mentee.jeecarnot.com/register/api/send-otp",{
             method : "POST",
             
             headers: {
@@ -113,26 +116,49 @@ verifyPhn.addEventListener('click', e =>{
        let res = await firstRes.json();
        console.log(firstRes);
        console.log(res);
+
+       if(res.type == "success"){
+
+            verifyPhn.disabled = false
+            verifyPhn.style.cursor = "pointer"
+            verifyPhn.value = "Verify phone number"
+            popup.classList.add('popup-visible')
+            document.body.style.pointerEvents = "none";
+            timerFunction(61)
+            swal(
+                'Success',
+                res.msg,
+                "success"
+            )
+        }
+        else{
+            verifyPhn.disabled = false
+            verifyPhn.style.cursor = "pointer"
+            verifyPhn.value = "Verify phone number"
+            popup.classList.remove('popup-visible')
+            document.body.style.pointerEvents = "all";
+            swal(
+                'Error',
+                res.msg,
+                "warning"
+            )
+        }
     }
       
+    //console.log(data)
     
-    console.log(data)
-    popup.classList.add('popup-visible')
-    timerFunction(61)
-    // document.querySelectorAll('#signupForm .inp').forEach(e=>{
-    //     e.value = ""
-    // })
     document.querySelectorAll('#otp input').forEach(e=>{
         e.value = ""
     })
-    document.body.style.pointerEvents = "none";
-})
+    //document.body.style.pointerEvents = "none";
+})//end of onClick 
 
 // otp input functionality
 function otpEnterEvent(item,id){
     if(item.value.length){
         document.getElementById(id).focus();
     }
+    
 }
 function clearInput(item,id){
    item.addEventListener('keyup',e=>{
@@ -169,3 +195,106 @@ const timerFunction =(a)=>{
     }, 1000);
 }
 
+
+// resend function
+let resendOTP =async ()=>{
+    document.querySelector(".resend").style.pointerEvents = "none"
+    const firstRes = await fetch("https://mentee.jeecarnot.com/register/api/resend-otp",{
+        method : "POST",
+        
+        headers: {
+            "Content-Type": "application/json"
+        },
+       
+        body : JSON.stringify({
+            name : signupInput[0].value,
+            email : signupInput[2].value,
+            phone : signupInput[1].value,
+            password : signupInput[3].value,
+        }) 
+   })
+   let res = await firstRes.json();
+   console.log(firstRes);
+   console.log(res);
+   timer.style.display = "inline"
+   if(res.type == "success"){
+    document.querySelector(".resend").style.pointerEvents = "visible"
+       timerFunction(61)
+      
+       swal(
+           'Success',
+           res.msg,
+           "success"
+       )
+   }
+   else{
+    popup.classList.remove('popup-visible')
+    document.body.style.pointerEvents = "all"
+    document.querySelector(".resend").style.pointerEvents = "visible"
+    swal(
+        'Error',
+        res.msg,
+        "warning"
+    )
+   }
+}
+
+// verify otp
+
+const verifyOTP =async () =>{
+    verifyOtp.value = "verifying..."
+    verifyOtp.disabled = true
+    verifyOtp.style.cursor = "not-allowed"
+    let otp = ""
+    otp_input.forEach(e=>{
+        otp += e.value;
+    })
+    const data = {
+        name : signupInput[0].value,
+        email : signupInput[2].value,
+        phone : signupInput[1].value,
+        password : signupInput[3].value,
+        otp,
+    }
+    console.log(data)
+
+    const firstRes = await fetch("https://mentee.jeecarnot.com/register",{
+            method : "POST",
+            
+            headers: {
+                "Content-Type": "application/json"
+            },
+           
+            body : JSON.stringify(data) 
+       })
+       let res = await firstRes.json();
+       console.log(firstRes);
+       console.log(res);
+       
+       if(res.type == "success"){
+
+            verifyOtp.disabled = false
+            verifyOtp.style.cursor = "pointer"
+            verifyOtp.value = "Verify and Proceed"
+        
+            swal({
+                title: "Success",
+                text: res.msg,
+                icon: "success",
+                button : "Login"
+            }).then(function() {
+                window.location = "/Login";
+            });
+        }
+        else{
+            verifyOtp.disabled = false
+            verifyOtp.style.cursor = "pointer"
+            verifyOtp.value = "Verify and Proceed"
+           
+            swal(
+                'Error',
+                res.msg,
+                "warning"
+            )
+        }
+}

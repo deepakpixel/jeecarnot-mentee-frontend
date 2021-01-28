@@ -146,18 +146,19 @@ a{
     justify-content: space-between;
 }
 .popup{
+   
     z-index: 100;
     display: none;
     background-color: #fff;
     width: 26em;
     min-width: 280px;
-    padding: 1em 4em;
+    padding: 1em;
     text-align: center;
     position: fixed;
     top: 30%;
     left: 50%;
     border-radius: 1em;
-    box-shadow: 0 0 0 1000vw rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 1000vw rgba(0, 0, 0, 0.7);
     transform: translate(-50%,-50%);
 }
 .timer{
@@ -196,6 +197,7 @@ a{
     border-bottom: 3px solid var(--otp-line) ;
     outline: none;
     width: 2em;
+    -moz-appearance: textfield;
 }
 .verify-otp{
     border: none;

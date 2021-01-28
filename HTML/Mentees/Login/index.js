@@ -37,10 +37,10 @@ loginInputs.forEach(e=>{
            }
         }
         
-
         console.log("in",error)
     })
 })
+
 const loginBtn = document.querySelector(".verify-phn")
 
 loginBtn.addEventListener("click",evt=>{
@@ -51,7 +51,11 @@ loginBtn.addEventListener("click",evt=>{
         }
     })
     if(!error){
-        console.log("can be submitted")
+        const data = {
+            email : loginInputs[0].value,
+            password : loginInputs[1].value
+        }
+        login(data)
     }
 })
 
@@ -63,3 +67,46 @@ function showPassword(e){
       }
 }
 
+const login = async (data)=>{
+    loginBtn.disabled = false
+    loginBtn.style.cursor = "not-allowed"
+    loginBtn.value = "Login..."
+    const firstRes = await fetch("https://mentee.jeecarnot.com/login",{
+        method : "POST",
+        
+        headers: {
+            "Content-Type": "application/json"
+        },
+       
+        body : JSON.stringify(data) 
+   })
+   let res = await firstRes.json();
+   console.log(firstRes);
+   console.log(res);
+   
+   if(res.type == "success"){
+
+        loginBtn.disabled = false
+        loginBtn.style.cursor = "pointer"
+        loginBtn.value = "Login"
+    
+        swal({
+            title: "Success",
+            text: res.msg,
+            icon: "success",
+        }).then(function() {
+            window.location = "/account";
+        });
+    }
+    else{
+        loginBtn.disabled = false
+        loginBtn.style.cursor = "pointer"
+        loginBtn.value = "Login"
+       
+        swal(
+            'Error',
+            res.msg,
+            "warning"
+        )
+    }
+}

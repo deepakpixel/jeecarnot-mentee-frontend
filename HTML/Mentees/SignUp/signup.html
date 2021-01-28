@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- <script src="../Assgn-Assets/fontawesome-free-5.15.1-web/js/all.js"></script> -->
 </head>
@@ -68,8 +69,8 @@
 
         <h1>OTP Verification</h1>
         <p>Enter the OTP sent to: <span id="otpPhone"></span></p>
-        <form id="otp" name="otp">
-            <input type="text" id="one" pattern="[0-9]" autofocus maxlength="1" onkeyup="otpEnterEvent(this,'two')"  onfocus="clearInput(this,Number(this.dataset.id))" data-id="0">
+        <form id="otp" name="otp" novalidate autocomplete="off">
+            <input type="text" id="one" pattern="[0-9]" autofocus maxlength="1" onkeyup="otpEnterEvent(this,'two')"  onfocus="clearInput(this,Number(this.dataset.id))" data-id="0" >
 
             <input type="text" id="two" pattern="[0-9]" maxlength="1" onkeyup="otpEnterEvent(this,'three')" onfocus="clearInput(this,Number(this.dataset.id))" data-id="1">
 
@@ -77,10 +78,11 @@
 
             <input type="text" id="four" pattern="[0-9]" maxlength="1" onfocus="clearInput(this,Number(this.dataset.id))" data-id="3">
         </form>
-        <p>Didn't receive the OTP? <a href="" class="resend">Resend OTP  <span class="timer"></span></a></p>
+        <p>Didn't receive the OTP? <a href="#" class="resend" onclick="resendOTP()">Resend OTP  <span class="timer"></span></a></p>
         
-        <input type="button" class="verify-otp" value="Verify and Proceed">
+        <input type="button" class="verify-otp" value="Verify and Proceed" onclick="verifyOTP()">
     </div>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 </body>
 </html>
