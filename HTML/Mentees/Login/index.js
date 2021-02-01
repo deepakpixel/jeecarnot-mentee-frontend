@@ -68,19 +68,21 @@ function showPassword(e){
 }
 
 const login = async (data)=>{
-    loginBtn.disabled = false
+    loginBtn.disabled = true
     loginBtn.style.cursor = "not-allowed"
     loginBtn.value = "Login..."
     const firstRes = await fetch("https://mentee.jeecarnot.com/login",{
         method : "POST",
         
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Cookie": "connect.sid=value",
         },
        
         body : JSON.stringify(data) 
    })
    let res = await firstRes.json();
+   
    console.log(firstRes);
    console.log(res);
    
@@ -110,3 +112,11 @@ const login = async (data)=>{
         )
     }
 }
+
+
+// fetch("https://mentee.jeecarnot.com/isloggedin", { 
+//     headers :{ 
+//         "Cookie": "connect.sid=value"
+//     }
+
+// }).then(res=>res.json()).then(data=>console.log(data))

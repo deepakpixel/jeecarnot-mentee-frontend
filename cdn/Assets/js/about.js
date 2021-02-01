@@ -42,6 +42,7 @@ bell.addEventListener("click",e=>{
     }
     document.querySelector(".notifications").classList.toggle("hidden")
 })
+
 profile.addEventListener("click",e=>{
     if(document.querySelector(".notifications").classList.contains("hidden")){
         document.querySelector(".notifications").classList.remove("hidden")

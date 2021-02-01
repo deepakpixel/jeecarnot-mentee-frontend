@@ -107,9 +107,53 @@ header{
 .bar-transform{
     transform: translate(240px);
 }
+/* ---- */
+/* Profile info top right */
+.profile-info{
+    display: none;
+    width: 280px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.288);
+    top: 90%;
+    right: 5%;
+    z-index: 10;
+    overflow: hidden;
+}
+.top-info{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+.email{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.profile-info  ul{
+    display: flex;
+    flex-direction: column;
+    margin:0.7em ;
+}
+.profile-info ul li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: var(--dark-blue);
+    padding: 0.5em 0;
+    list-style: none;
+}
+.profile-info ul li:hover{
+    background-color: var(--notify-hover);
+}
+.profile-info ul li img{
+    padding :0 10px;
+}
+/* ------ */
 section{
     display: flex;
-    /* min-height: 100vh; */
     margin-top: 67px;
    
 }
@@ -210,7 +254,7 @@ section{
 .mentee-profile-box{
     background-color: #fff;
     width: 40vw;
-    margin: 10em auto;
+    margin: 10em auto 0 auto;
     position: relative;
     border-radius: 1em;
     text-align: center;
@@ -263,16 +307,27 @@ section{
     font-size: 14px;
     display: flex;
     text-align: left;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    margin: 0 0 0 2em;
 }
 .left-key-profile{
     color: var(--dark-blue);
     
 }
-.right-value-profile{
+.left-key-profile p{
+    display: flex;
+   
+}
+.left-key-profile span:first-child{
+    width: 150px;
+    min-width: 150px;
+}
+.left-key-profile span:last-child{
     font-weight: 300;
     color: #969799;
+    /* padding:0 60px 0 10px; */
 }
+
 .key-value-profile p{
     margin-bottom: 1em;
 }
@@ -357,9 +412,10 @@ section{
     border-radius: 50%;
     margin:0 0 10px 19px;
     cursor: pointer;
-    border: 1px solid black;
+    border: 1px solid var(--dark-blue);
 }
 .round-ans span:hover{
+    border: 1px solid rgb(85, 233, 85);
     background-color: rgb(85, 233, 85);
 }
 .submit-feedback-btn{
@@ -755,8 +811,8 @@ hr{
     margin: auto;
 }
 .mentor-img-right{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-image: url(/jeecarnot-mentee-frontend/cdn/Assets/images/Untitled-0@2x.png) ;
     background-position: 40% 45%;
     background-size: 340%;
@@ -1097,8 +1153,8 @@ color: var(--mid-gray);
         height: 24em;
     }
     .mentee-profile-box{
-       width: 85vw;
-       margin: auto;
+       width: 90vw;
+       margin: 8em auto 0 auto;
     }
     .mentee-studyMaterial{
         width: 85vw;
@@ -1143,11 +1199,17 @@ color: var(--mid-gray);
     /* body{
         height: 0vh;
     } */
+    .left-key-profile span:last-child{
+        padding: 0;
+    }
    
 }
 @media only screen and (max-width: 400px){
     .sub-topics{
         grid-template-columns: 1fr;
+    }
+    .key-value-profile{
+        margin: 0;
     }
 }
 
