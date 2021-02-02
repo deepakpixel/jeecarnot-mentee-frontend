@@ -49,57 +49,57 @@
                 <form class="c-p-details-inputs" novalidate autocomplete="off">
                     <div>
                         <p>Name :</p>
-                        <p>Rahul</p>
+                        <p class="details-field">...</p>
                     </div>
                     <div>
                         <p>Email :</p>
-                        <p>rahul@gmail.com</p>
+                        <p class="details-field">...</p>
                     </div>
                     <div>
                         <p>Phone :</p>
-                        <p>+91-87878787878</p>
+                        <p class="details-field">...</p>
                     </div>
                     <div>
                         <p>Alternate Phone :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
                         <p>Parent Name :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
                         <p>Parent Phone :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
                         <p>Class :</p>
                         <p>
-                            <input type="text" disabled>
-                            <i class="fas fa-chevron-down"></i>
+                            <input type="text" class="all-input" placeholder="Eg : 11,12 or Dropped" >
+                            <!-- <i class="fas fa-chevron-down"></i> -->
                         </p>
                     </div>
                     <div>
                         <p>Last attempted JEE year :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
                         <p>Percentile :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
                         <p>JEE target year :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
@@ -108,7 +108,7 @@
                             <div class="mop-options_one">
                                 <div>
 
-                                    <input type="radio" name="mop" value="coaching" >
+                                    <input type="radio" class="all-input" name="mop" value="coaching" >
                                 </div>
                                 <div class="coaching" >Coaching</div>
                             </div>
@@ -116,23 +116,23 @@
                             <div class="mop-options_two">
                                 <div>
 
-                                    <input type="radio" name="mop" value="self">
+                                    <input type="radio" class="all-input" name="mop" value="self">
                                 </div>
                                 <div class="self" >Self-study</div>
                             </div>
                         </p>
                         
                     </div>
-                    <div>
+                    <!-- <div>
                         <p>Coaching :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
-                    </div>
+                    </div> -->
                     <div>
                         <p >Other entrance exams you are targeting :</p>
                         <p>
-                            <input type="text">
+                            <input type="text" class="all-input">
                         </p>
                     </div>
                     <div>
@@ -141,7 +141,7 @@
                             <div class="mop-options_one">
                                 <div>
 
-                                    <input type="radio" name="lang" value="hindi" >
+                                    <input type="radio" class="all-input" name="lang" value="hindi" >
                                 </div>
                                 <div class="coaching" >Hindi</div>
                             </div>
@@ -149,7 +149,7 @@
                             <div class="mop-options_two">
                                 <div>
 
-                                    <input type="radio" name="lang" value="english">
+                                    <input type="radio" class="all-input" name="lang" value="english">
                                 </div>
                                 <div class="self" >English</div>
                             </div>
@@ -159,26 +159,26 @@
                     <div>
                         <p>Study material requirement:</p>
                         <p>
-                            <input  type="text" disabled>
+                            <input  type="text" class="all-input" disabled>
                             <i class="fas fa-chevron-down"></i>
                         </p>
                     </div>
-                    <div class="text-area">
+                    <div class="text-area ">
                         <p >How did you first hear about JEECarnot? </p>
                         <p >
-                          <textarea name="" id="" ></textarea>
+                          <textarea placeholder="Your answer" name="" class="all-input" id="" ></textarea>
                         </p>
                     </div>
-                    <div class="text-area">
+                    <div class="text-area" >
                         <p >Why do you want mentorship?</p>
                         <p >
-                             <textarea name="" id="" ></textarea>
+                             <textarea placeholder="Your answer" class="all-input" name="" id="" ></textarea>
                         </p>
                     </div>
-                    <div class="text-area">
+                    <div class="text-area" >
                         <p >Expectations from us :</p>
                         <p >
-                            <textarea name="" id="" ></textarea>
+                            <textarea placeholder="Your answer" name="" class="all-input" id="" ></textarea>
                         </p>
                     </div>
     
@@ -187,7 +187,7 @@
             </div>
             <div class="c-p-buttons">
                 <button>Cancel</button>
-                <button>Next</button>
+                <button class="nextBtn" onclick="updateProfile()">Next</button>
                 <button>Skip</button>
             </div>
         </div>
@@ -195,5 +195,6 @@
 
     </div>
     <script src="/jeecarnot-mentee-frontend/cdn/Assets/menteeJS/cpPersonal.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 </body>
 </html>

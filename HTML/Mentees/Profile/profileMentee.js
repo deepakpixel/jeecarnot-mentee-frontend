@@ -95,7 +95,7 @@ async function getData(){
         value_datails[7].textContent = lastAttemptJeepercentile
         value_datails[8].textContent = targetYear
         value_datails[9].textContent = modePreparation
-        value_datails[10].textContent = "coaching not found"
+        value_datails[10].textContent = modePreparation
         value_datails[11].textContent = otherTargetExams
         value_datails[12].textContent = language
         value_datails[13].textContent = materialRequirement

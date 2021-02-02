@@ -539,14 +539,14 @@ section{
     position: fixed;
     z-index: 20;
     min-width: 350px;
-    top: 35%;
+    top: 20% ;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%);
     box-shadow: 0 0 0 500em rgba(0, 0, 0, 0.397);
     background-color: #fff;
     border-radius: 1em;
     overflow: hidden;
-   
+    display: none;
 }
 .summary-head,.sub-p-head,.chapter-head{
     display: flex;
@@ -620,8 +620,81 @@ section{
 .sub-p-name > div:hover{
     border: 3px solid var(--dark-blue);
 }
+/* Chapter popup */
+.chapter-inner-head{
+    color: var(--name-yellow);
+    font-size: 13px;
+    margin: 0.7em 0 0.7em 2em;
+}
+.chapter-topics{
+    width: 70%;
+    margin: auto;
+}
+.chapter-main-topic{
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 15px;
+    margin: 3px auto 7px auto;
+    border-radius: 200px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.178);
+}
+.dropDown-chapter{
+    cursor: pointer;
+}
+.chapter-sub-topic{
+    /* display: none;  */
+    opacity: 0;
+    transform: scaleY(0);
+    position: absolute;
+    transition: 0.1s ease-in;
+    transform-origin: top;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 1em;
+    height: 150px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.178);
+    color: var(--dark-blue);
+}
+.chapter-dropDown{
+    opacity: 1;
+    position: relative;
+    display: block;
+    transform: scaleY(1);
+    transition: .4s transform;
+}
+.ch-rotate{
+    transition: .4s transform;
+    transform: rotateZ(180deg) !important;
+}
+.chapter-sub-topic p{
+    cursor: pointer;
+    padding: 0.5em;
+    user-select: none;
+    font-weight: 300;
+    border-bottom: 1px solid var(--dark-blue);
+}
+.chapter-sub-topic p:hover{
+    background-color: var(--light);
+}
+.chapter-sub-topic p:last-child{
+    margin-bottom: 10px;
+}
+.ch-nextBtn{
+    color: #fff;
+    background-color: var(--dark-blue);
+    font-size: 12px;
+    padding: 0.5em 2.5em;
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 1em 50%;
+    transform: translate(-50%);
+}
 
-/* Account */
+/* ----Account----- */
 
 .mentee-account{
     background-color: #fff;
@@ -954,7 +1027,7 @@ hr{
 .mop-options_one div,.mop-options_two div{
     margin: 3px;
 }
-.fa-chevron-down{
+.mentee-c-p-wrapper .fa-chevron-down{
     position: absolute;
     cursor: pointer;
     top:50%;
@@ -967,8 +1040,9 @@ hr{
 .text-area  textarea {
     border: none;
     resize: none;
+    font-size: 14px;
     border-radius: 1em;
-    padding:0.2em 0.5em;
+    padding:0.5em ;
     width: 250px !important;
     background-color: rgb(233, 233, 233);
     font-family: sans-serif;
@@ -1081,7 +1155,7 @@ color: var(--mid-gray);
     border-left: 3px solid var(--dark-blue);
     border-right: 3px solid var(--dark-blue);
     border-bottom: 3px solid var(--dark-blue);
-    background-color: rgb(221, 236, 255);
+    background-color: rgb(221, 236, 255) !important;
 }
 .txt-id{
     color: var(--date);
