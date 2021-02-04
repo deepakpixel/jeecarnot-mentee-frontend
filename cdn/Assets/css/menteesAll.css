@@ -105,7 +105,7 @@ header{
     transition: 0.1s all ease-out;
 }
 .bar-transform{
-    transform: translate(240px);
+    transform: translate(200px);
 }
 /* ---- */
 /* Profile info top right */
@@ -155,7 +155,7 @@ header{
 section{
     display: flex;
     margin-top: 67px;
-   
+    
 }
 
 /* side bar*/
@@ -163,8 +163,10 @@ section{
     background-color: var(--dark-blue);
     position: fixed;
     color: #ffffff;
-    height: 100vh;
-    width: 300px;
+    /* height: 200vh; */
+    top: 67px;
+    bottom: 0;
+    width: 271px;
     padding: 65px 0 0 0px;
     z-index: 1;
     user-select: none;
@@ -440,22 +442,26 @@ section{
 /* -------------- */
 /* Study Material */
     .mentee-studyMaterial{
-        margin: 8em auto ;
+        margin: 12em auto 2em auto ;
     }
-    .top-part{
+    .issued-material .top-part{
         position: absolute;
-        top: -100px;
+        top: -120px;
         width: 100%;
     }
     .top-part h1, .top-part p{
         position: relative;
         color: var(--dark-blue);
-        left: -200px;
+        left: -60px;
+        text-align: left;
+    }
+    .top-part h1{
+        font-size: 30px;
     }
     .top-part button{
         cursor: pointer;
         padding: 0.7em 2em;
-        margin: 0em 0 1em 0;
+        margin: 0.5em 1vw 1em 0;
         border-radius: 200px;
         color: var(--dark-blue);
         background-color: #fff;
@@ -465,17 +471,18 @@ section{
         background-color: var(--dark-blue);
         color: #fff;
     }
+    
     .issued-material {
         position: relative;
         border-radius: 1em;
         text-align: center;
         background-color: #fff;
-        box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
+        /* box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267); */
     }
     
     .subject-name{
         color: var(--dark-blue);
-        border-bottom: 2px solid var(--date);
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.096);
         border-radius:1em 1em 0 0;
         display: flex;
         height: 2.5em;
@@ -490,30 +497,46 @@ section{
         height: 100%;
         line-height: 2.5em;
     }
-    .subject-name p:nth-child(2){
-        border-left: 2px solid var(--date);
-        border-right: 2px solid var(--date);
-    }
     .subject-name p:hover{
         color: #fff;
         background-color: var(--dark-blue);
     }
     .sub-topics{
         padding: 1em;
+        width: 540px;
         display: grid;
         font-size: 13px;
+        justify-content: center;
         grid-template-columns: auto auto auto;
-        grid-gap: 1em;
+        /* grid-gap: 2em;  */
+        
     }
+    .global-hide-class{
+        display: none !important;
+    }
+    
     .sub-topics > div{
         border-radius: 1em;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
-        padding: 10px 10px 0 10px;
+        box-shadow: 0px 3px 6px #00000029;
+        width: 150px;
+        height: 115px;
+        margin: 1em;
+        /* margin: auto; */
+        position: relative;
+        overflow: hidden;
+        /* padding: 10px 10px 0 10px;  */
+       
+    }
+    .sub-topics .no-topic-img{
+        width: 200px !important;
     }
     .sub-topics img{
-        width: 50px;
+        width: 40px;
+        padding: 5px 0;
     }
     .sub-topics p{
+        text-align: left;
+        padding: 0 0px 0 10px;
         color: var(--notify-text);
     }
     .sub-topics span{
@@ -521,12 +544,21 @@ section{
     }
     .view-download{
         padding: 5px;
+        display: flex;
+        /* justify-content: space-between; */
         overflow: hidden;
+        position: absolute;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
     }
     .view-download a{
         text-decoration: none;
         color: var(--dark-blue);
-        padding: 4px;
+        padding: 6px 0;
+        width: 100%;
+        display: block;
+        /* background-color: red; */
         font-size: 12px;
     }
     .view-download a:hover{
@@ -535,7 +567,7 @@ section{
     }
 /* summary popup */
 
-.sm-summary,.sub-popup, .sm-chapter{
+.sm-summary,.sub-popup, .sm-chapter,.sm-material-checkboxes{
     position: fixed;
     z-index: 20;
     min-width: 350px;
@@ -645,6 +677,7 @@ section{
     border-radius: 200px;
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.178);
 }
+
 .dropDown-chapter{
     cursor: pointer;
     transition: .1s all ;
@@ -662,14 +695,14 @@ section{
     margin-bottom: 20px;
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.178);
     padding: 1em;
-    height: 150px;
+    height: 230px;
 }
 .ch-rotate{
     transform: rotateZ(180deg) !important;
 }
 .chapter-sub-topic p{
     cursor: pointer;
-    padding: 0.5em;
+    padding: 0.2em;
     user-select: none;
     font-weight: 300;
     border-bottom: 1px solid var(--dark-blue);
@@ -690,7 +723,17 @@ section{
     margin: 1em 50%;
     transform: translate(-50%);
 }
-
+::-webkit-scrollbar{
+    width: 4px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: var(--dark-blue);
+}
+::-moz-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: var(--dark-blue);
+}
 /* ----Account----- */
 
 .mentee-account{
@@ -1178,9 +1221,10 @@ color: var(--mid-gray);
         width: 85vw;
     }
     .mentee-studyMaterial,.mentee-account{
-        margin: 9em 0 0 5em;
-        width: 500px;
+        margin: 12em 0 0 10vw;
+        /* width: 500px; */
     }
+  
     .mentee-profile-box,.feedback-wrapper{
         width: 60%;
         margin-left: 3em;
@@ -1196,10 +1240,10 @@ color: var(--mid-gray);
     }
     .mentee-studyMaterial{
         width: 550px;
-        margin:9em auto;
+        margin:12em auto;
     }
     .top-part h1,.top-part p{
-        position: static;
+       left: -5vw;
     }
     .mentee-profile-box,.feedback-wrapper{
         width: 85vw;
@@ -1232,6 +1276,9 @@ color: var(--mid-gray);
     }
     .sub-topics{
         grid-template-columns: 1fr 1fr;
+        width: 0;
+        margin: auto;
+        
     }
     .feedback-wrapper{
         margin-left: 0;
@@ -1279,7 +1326,11 @@ color: var(--mid-gray);
     .sub-topics{
         grid-template-columns: 1fr;
     }
+    .sub-topics > div{
+        width: 200px;
+    }
     .key-value-profile{
         margin: 0;
     }
+   
 }

@@ -1,0 +1,517 @@
+{
+  "p-p1": {
+    "name": "Units and Dimensions",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p2": {
+    "name": "Experimental Analysis and Error",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p3": {
+    "name": "Kinematics",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p4": {
+    "name": "NLM and Friction",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p5": {
+    "name": "Circular Motion",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p6": {
+    "name": "Work Energy",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p7": {
+    "name": "Center of mass and momentum",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p8": {
+    "name": "Rotational Motion",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-p9": {
+    "name": "Elasticity and thermal Expansion",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-10": {
+    "name": "Surface Tension and Viscosity",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-11": {
+    "name": "Gravitation",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-12": {
+    "name": "Thermodynamics",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-13": {
+    "name": "Fluid",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-14": {
+    "name": "Wave",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-15": {
+    "name": "Sound",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-16": {
+    "name": "Harmonic Motions(SHM)",
+    "class": 11,
+    "subtopics": []
+  },
+  "p-17": {
+    "name": "Electric Fields",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-18": {
+    "name": "Electric Current",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-19": {
+    "name": "Capacitance",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-20": {
+    "name": "Magnetic Fields",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-21": {
+    "name": "Electromagnetic Induction(EMI)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-22": {
+    "name": "Alternating Current(AC)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-23": {
+    "name": "Electromagnetic Wave",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-24": {
+    "name": "Reflection and Refraction (Ray Optics)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-25": {
+    "name": "Wave nature of Light(Wave Optics)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-26": {
+    "name": "Modern Physics 1(Atomic)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-27": {
+    "name": "Modern Physics 2 (Nuclei)",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-28": {
+    "name": "Semi Conductor",
+    "class": 12,
+    "subtopics": []
+  },
+  "p-29": {
+    "name": "Communication",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-c1": {
+    "name": "Mole Concept",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c3": {
+    "name": "Atomic Structure",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c4": {
+    "name": "Periodic Properties",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c5": {
+    "name": "Chemical Bonding",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c6": {
+    "name": "States of Matter",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c7": {
+    "name": "Thermodynamics",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c8": {
+    "name": "Thermochemistry",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-c9": {
+    "name": "Chemical Equilibrium",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-10": {
+    "name": "Ionic Equilibrium",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-11": {
+    "name": "Redox Reactions",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-12": {
+    "name": "Hydrogen and its Compounds",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-13": {
+    "name": "S block Elements",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-14": {
+    "name": "P block Elements 1",
+    "class": 11,
+    "subtopics": []
+  },
+  "c-15": {
+    "name": "Isomerism",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-16": {
+    "name": "GOC",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-17": {
+    "name": "P Block Elements 2",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-18": {
+    "name": "Aromatic Hydrocarbons",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-19": {
+    "name": "Acidity and Basicity",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-20": {
+    "name": "Environmental Chemistry",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-21": {
+    "name": "Solid State",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-22": {
+    "name": "Solutions",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-23": {
+    "name": "Electrochemistry",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-24": {
+    "name": "Chemical Kinetic",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-25": {
+    "name": "Surface Chemistry",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-26": {
+    "name": "Coordination Compounds",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-27": {
+    "name": "D and F block Elements",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-28": {
+    "name": "Chemistry in Everyday life",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-29": {
+    "name": "Alkyl Halides",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-30": {
+    "name": "Grignard Reagent",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-31": {
+    "name": "Alcohol and Ether",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-32": {
+    "name": "Carbonyl Compounds",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-33": {
+    "name": "Carboxylic Acids",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-34": {
+    "name": "Organic Compounds Containing Nitrogen",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-35": {
+    "name": "Principles related to Practical Chemistry",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-36": {
+    "name": "General Principles and Processes of Isolation of metals",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-37": {
+    "name": "Polymers",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-38": {
+    "name": "Biomolecules",
+    "class": 12,
+    "subtopics": []
+  },
+  "c-39": {
+    "name": "Practical Organic Chemistry",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-m1": {
+    "name": "Complex Number",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-m2": {
+    "name": "Quadratic Equations",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-m3": {
+    "name": "Sequence and Series",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-m4": {
+    "name": "Permutations and Combinations",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-m5": {
+    "name": "Binomial Theorem",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-m6": {
+    "name": "Probability",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-m7": {
+    "name": "Determinants",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-m8": {
+    "name": "Matrices",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-m9": {
+    "name": "Sets",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-10": {
+    "name": "Relations",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-11": {
+    "name": "Functions",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-12": {
+    "name": "Limits",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-13": {
+    "name": "Continuity",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-14": {
+    "name": "Differentiabilty",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-15": {
+    "name": "Methods of Differention",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-16": {
+    "name": "AOD: Monotonicity",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-17": {
+    "name": "AOD: Tangent and Normal",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-18": {
+    "name": "AOD: Maxima and Minima",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-19": {
+    "name": "Inefinite Integration",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-20": {
+    "name": "Definite Integration",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-21": {
+    "name": "Area",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-22": {
+    "name": "Differential Equations",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-23": {
+    "name": "Straight Lines",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-24": {
+    "name": "Circle",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-25": {
+    "name": "Parabola",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-26": {
+    "name": "Ellipse",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-27": {
+    "name": "Hyperbola",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-28": {
+    "name": "Trigonometric Ratios and Identities",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-29": {
+    "name": "Trigonometric Equations",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-30": {
+    "name": "Inverse Trigonometric Functions",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-31": {
+    "name": "Solution of Triangles",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-32": {
+    "name": "Vectors",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-33": {
+    "name": "3D Geometry",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-34": {
+    "name": "Statistics",
+    "class": 12,
+    "subtopics": []
+  },
+  "m-35": {
+    "name": "Mathematical Induction",
+    "class": 11,
+    "subtopics": []
+  },
+  "m-36": {
+    "name": "Mathematical Reasoning",
+    "class": 11,
+    "subtopics": []
+  }
+}

@@ -74,12 +74,12 @@
 
         <aside class="sidebar">
            <ul>
-               <li id="home"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-home-100 (2)@2x.png" alt="home-icon"> HOME</li>
-               <li id="study"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-book-100@2x.png" alt="study-material"> STUDY MATERIAL</li>
-               <li id="blog"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-google-blog-search-100@2x.png" alt="blog-icon"> BLOG</li>
-               <li id="feedback"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-feedback-100 (1)@2x.png" alt="feedback-icon"> FEEDBACK</li>
-               <li id="faq"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-faq-100 (1)@2x.png" alt="faq-icon"> FAQ</li>
-               <li id="help"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-help-100 (3)@2x.png" alt="help-icon"> HELP AND SUPPORT</li>
+               <li  id="home"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-home-100 (2)@2x.png" alt="home-icon"> HOME</li>
+               <li  id="study"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-book-100@2x.png" alt="study-material"> STUDY MATERIAL</li>
+               <li  id="blog"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-google-blog-search-100@2x.png" alt="blog-icon"> BLOG</li>
+               <li  id="feedback"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-feedback-100 (1)@2x.png" alt="feedback-icon"> FEEDBACK</li>
+               <li  id="faq"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-faq-100 (1)@2x.png" alt="faq-icon"> FAQ</li>
+               <li  id="help"><img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-help-100 (3)@2x.png" alt="help-icon"> HELP AND SUPPORT</li>
            </ul>
        </aside> 
 
@@ -89,7 +89,7 @@
                 <div class="top-part">
                     <h1>Study Material</h1>
                     <button class="req-btn">Request Material</button>
-                    <button>Past Requests</button>
+                    <button onclick="pastRequest()">Past Requests</button>
                     <p>Issued Material -</p>
                 </div>
                 <div class="subjects">
@@ -98,8 +98,9 @@
                         <p>Chemistry</p>
                         <p>Maths</p>
                     </div>
-                    <div class="sub-topics">
-                        <div class="material-topic-first">
+
+                    <div class="sub-topics topic_physics">
+                        <div class="material_topicbox material-topic-first">
                             <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
                             <p>Chapter : <span>Electrostatic</span></p>
                             <p>Material : <span>Theory</span></p>
@@ -108,7 +109,7 @@
                                 <a href="">Download</a>
                             </div>
                         </div>
-                        <div class="material-topic-second">
+                        <div class="material_topicbox material-topic-second">
                             <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
                             <p>Chapter : <span>Electrostatic</span></p>
                             <p>Material : <span>Theory</span></p>
@@ -117,7 +118,7 @@
                                 <a href="">Download</a>
                             </div>
                         </div>
-                        <div class="material-topic-third">
+                        <div class="material_topicbox material-topic-third">
                             <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
                             <p>Chapter : <span>Electrostatic</span></p>
                             <p>Material : <span>Theory</span></p>
@@ -126,7 +127,7 @@
                                 <a href="">Download</a>
                             </div>
                         </div>
-                        <div class="material-topic-fourth">
+                        <div class="material_topicbox material-topic-fourth">
                             <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
                             <p>Chapter : <span>Electrostatic</span></p>
                             <p>Material : <span>Theory</span></p>
@@ -136,6 +137,86 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="sub-topics topic_chemistry">
+                        <div class="material_topicbox material-topic-first">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-lab-items-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <div class="material_topicbox material-topic-second">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <!-- <div class="material_topicbox material-topic-third">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <div class="material_topicbox material-topic-fourth">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="sub-topics topic_maths">
+                        <img class="no-topic-img" src="/jeecarnot-mentee-frontend/cdn/Assets/images/undraw_no_data_qbuo@2x.png" alt="">
+                        <!-- <div class="material_topicbox material-topic-first">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-sigma-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <div class="material_topicbox material-topic-second">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <div class="material_topicbox material-topic-third">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div>
+                        <div class="material_topicbox material-topic-fourth">
+                            <img src="/jeecarnot-mentee-frontend/cdn/Assets/images/icons8-physics-100 (1)@2x.png" alt="">
+                            <p>Chapter : <span>Electrostatic</span></p>
+                            <p>Material : <span>Theory</span></p>
+                            <div class="view-download">
+                                <a href="">View</a>
+                                <a href="">Download</a>
+                            </div>
+                        </div> -->
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -207,7 +288,7 @@
 
                 <div class="chapter-topics">
                     <div class="chapter-main-topic">
-                        <p>Electrostatic</p>
+                        <p class="option-placeholder">--Select--</p>
                         <i class="fas fa-chevron-down dropDown-chapter"></i>
                        
                     </div>
@@ -218,71 +299,23 @@
                         
                         <p>Magnetic Effects of Curent and Magnetism</p>
                         
-                        <!-- <p>Electromagnetic Induction and Alternating Currents</p> -->
+                        <p>Electromagnetic Induction and Alternating Currents</p>
+                       
                         
                        
                     </div>
                 </div>
-                <div class="chapter-topics">
-                    <div class="chapter-main-topic">
-                        <p>Electrostatic</p>
-                        <i class="fas fa-chevron-down dropDown-chapter"></i>
-                    </div>
-                    <div class="chapter-sub-topic">
-                        <p>Electrostatics</p>
-                        
-                        <p>Current Density</p>
-                        
-                        <p>Magnetic Effects of Curent and Magnetism</p>
-                        
-                        <p>Electromagnetic Induction and Alternating Currents</p>
-                        
-                        <p>Electrostatics</p>
-                        
-                        <p>XYZ</p>
-                    </div>
-                </div>
-                <div class="chapter-topics">
-                    <div class="chapter-main-topic">
-                        <p>Electrostatic</p>
-                        <i class="fas fa-chevron-down dropDown-chapter"></i>
-                    </div>
-                    <div class="chapter-sub-topic">
-                        <p>Electrostatics</p>
-                        
-                        <p>Current Density</p>
-                        
-                        <p>Magnetic Effects of Curent and Magnetism</p>
-                        
-                        <p>Electromagnetic Induction and Alternating Currents</p>
-                        
-                        <p>Electrostatics</p>
-                        
-                        <p>XYZ</p>
-                    </div>
-                </div>
-                <div class="chapter-topics">
-                    <div class="chapter-main-topic">
-                        <p>Electrostatic</p>
-                        <i class="fas fa-chevron-down dropDown-chapter"></i>
-                    </div>
-                    <div class="chapter-sub-topic">
-                        <p>Electrostatics</p>
-                        
-                        <p>Current Density</p>
-                        
-                        <p>Magnetic Effects of Curent and Magnetism</p>
-                        
-                        <p>Electromagnetic Induction and Alternating Currents</p>
-                        
-                        <p>Electrostatics</p>
-                        
-                        <p>XYZ</p>
-                    </div>
-                </div>
+               
                 <button class="ch-nextBtn">Next</button>
             </div>
 
+        </div>
+        <div class="sm-material-checkboxes">
+            <div class="chapter-head">
+                <i class="fas fa-arrow-left"></i>
+                <p>Material</p>
+                <i class="fas fa-times-circle" onclick="handleQuit(this.parentElement)"></i>
+            </div>
         </div>
         <!-- ----------- -->
         <div class="mentor-profile-right">

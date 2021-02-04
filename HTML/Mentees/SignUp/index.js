@@ -125,11 +125,11 @@ verifyPhn.addEventListener('click', e =>{
             popup.classList.add('popup-visible')
             document.body.style.pointerEvents = "none";
             timerFunction(61)
-            swal(
-                'Success',
-                res.msg,
-                "success"
-            )
+            // swal(
+            //     'Success',
+            //     res.msg,
+            //     "success"
+            // )
         }
         else{
             verifyPhn.disabled = false
@@ -221,11 +221,11 @@ let resendOTP =async ()=>{
     document.querySelector(".resend").style.pointerEvents = "visible"
        timerFunction(61)
       
-       swal(
-           'Success',
-           res.msg,
-           "success"
-       )
+    //    swal(
+    //        'Success',
+    //        res.msg,
+    //        "success"
+    //    )
    }
    else{
     popup.classList.remove('popup-visible')

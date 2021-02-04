@@ -164,3 +164,57 @@ async function getData(){
 }
 
  getData()
+
+ function pastRequest(){
+     swal(
+         "",
+         "Feature : Coming soon!",
+         'warning'
+     )
+ }
+
+ const subjectNameAll = document.querySelectorAll(".subject-name p")
+ const subjectTopicsAll = document.querySelectorAll(".sub-topics")
+ 
+ subjectTopicsAll[1].classList.add("global-hide-class")
+ subjectTopicsAll[2].classList.add("global-hide-class")
+
+ subjectNameAll.forEach((e,id)=>{
+    
+     subjectNameAll[0].style.borderBottom = "3px solid #09206F"
+     
+
+     e.addEventListener("click",evt=>{
+         for(let item of subjectNameAll){
+            item.style.borderBottom = "none"
+         }
+         for(let item of subjectTopicsAll){
+            item.classList.add("global-hide-class")
+         }
+         e.style.borderBottom = "3px solid #09206F"
+         console.log( subjectTopicsAll[id])
+         subjectTopicsAll[id].classList.remove("global-hide-class")
+     })
+     
+ })
+
+ const ch_dropdown_options = document.querySelectorAll(".chapter-sub-topic p")
+ const opt_placeholder = document.querySelector(".option-placeholder")
+ 
+ ch_dropdown_options.forEach(e=>{
+     e.addEventListener("click",evt=>{
+        ch_dropdown_options.forEach(item=>{
+            item.style.borderRight = "none"
+        })
+        e.style.borderRight = "3px solid  #09206F"
+         if(e.textContent.length > 21){
+
+             opt_placeholder.textContent = e.textContent.slice(0,22) + "..."
+            }
+            else{
+             opt_placeholder.textContent = e.textContent
+             
+         }
+     })
+ })
+

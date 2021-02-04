@@ -31,6 +31,16 @@ window.addEventListener('resize',(e)=>{
 
 const bell = document.querySelector(".bell")
 bell.addEventListener("click",e=>{
+    if(document.querySelector(".profile-info").classList.contains("hidden")){
+        document.querySelector(".profile-info").classList.remove("hidden")
+    }
     document.querySelector(".notifications").classList.toggle("hidden")
 })
 
+const profile = document.querySelector(".male-profile");
+profile.addEventListener("click",e=>{
+    if(document.querySelector(".notifications").classList.contains("hidden")){
+        document.querySelector(".notifications").classList.remove("hidden")
+    }
+    document.querySelector(".profile-info").classList.toggle("hidden")
+})
