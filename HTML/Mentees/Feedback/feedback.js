@@ -133,7 +133,7 @@ const sendFeedback=() =>{
             console.log("cant sub",error)
             return swal(
                 "Error",
-                "Fill",
+                "Fill all inputs",
                 "warning"
             )
         }

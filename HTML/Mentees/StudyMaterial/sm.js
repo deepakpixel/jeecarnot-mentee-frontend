@@ -46,20 +46,31 @@ profile.addEventListener("click",()=>{
 const summary = document.querySelector(".sm-summary");
 const subPopup = document.querySelector(".sub-popup");
 const chapterPopup = document.querySelector(".sm-chapter");
+const materialPopup = document.querySelector(".sm-material-checkboxes");
+
+
 const reqBtn = document.querySelector(".req-btn");
 
 reqBtn.addEventListener("click",()=>{
     subPopup.style.display = "block";
     summary.style.display = "none";
     chapterPopup.style.display = "none";
+    materialPopup.style.display = "none";
 
     document.body.style.pointerEvents = "none"
+
     subPopup.style.pointerEvents = "all"
     summary.style.pointerEvents = "all"
     chapterPopup.style.pointerEvents = "all"
+    materialPopup.style.pointerEvents = "all"
 })
 function handleQuit(elem){
-   elem.parentElement.style.display = "none"
+    console.log(elem)
+    subPopup.style.display = "none";
+    summary.style.display = "none";
+    chapterPopup.style.display = "none";
+    materialPopup.style.display = "none";
+   //elem.parentElement.style.display = "none"
    document.body.style.pointerEvents = "all"
 }
 let material = [];
@@ -68,28 +79,37 @@ function selectSubject(elem){
     if(elem.classList.contains("sub-p-phy")){
         let postString = "p-";
         chapterPopup.style.display = "block";
-        document.querySelector(".chapter-inner-head").textContent = `Physics >`
+        document.querySelectorAll(".chapter-content")[0].style.display = "block"
+        document.querySelectorAll(".chapter-content")[1].style.display = "none"
+        document.querySelectorAll(".chapter-content")[2].style.display = "none"
+        //document.querySelector(".chapter-inner-head").textContent = `Physics >`
         subPopup.style.display = "none";
         summary.style.display = "none";
-        chapterPopup.style.display = "block";
+        // chapterPopup.style.display = "block";
         material.push(postString)
     }
     if(elem.classList.contains("sub-p-che")){
         let postString = "c-";
         chapterPopup.style.display = "block";
-        document.querySelector(".chapter-inner-head").textContent = `Chemistry > `
+        document.querySelectorAll(".chapter-content")[1].style.display = "block"
+        document.querySelectorAll(".chapter-content")[0].style.display = "none"
+        document.querySelectorAll(".chapter-content")[2].style.display = "none"
+        //document.querySelector(".chapter-inner-head").textContent = `Chemistry > `
         subPopup.style.display = "none";
         summary.style.display = "none";
-        chapterPopup.style.display = "block";
+        // chapterPopup.style.display = "block";
         material.push(postString)
     }
     if(elem.classList.contains("sub-p-mas")){
         let postString = "m-";
         chapterPopup.style.display = "block";
-        document.querySelector(".chapter-inner-head").textContent = `Maths> `
+        document.querySelectorAll(".chapter-content")[0].style.display = "none"
+        document.querySelectorAll(".chapter-content")[1].style.display = "none"
+        document.querySelectorAll(".chapter-content")[2].style.display = "block"
+        //document.querySelector(".chapter-inner-head").textContent = `Maths> `
         subPopup.style.display = "none";
         summary.style.display = "none";
-        chapterPopup.style.display = "block";
+        // chapterPopup.style.display = "block";
         material.push(postString)
     }
     console.log(material)
@@ -105,12 +125,19 @@ chapterDD.forEach(e=>{
     })
 })
 
-const backArrow = document.querySelector(".chapter-head .fa-arrow-left")
+const backArrowChap = document.querySelector(".chapter-head .fa-arrow-left")
+const backArrowMat = document.querySelector(".mt-head .fa-arrow-left")
 
-backArrow.addEventListener("click",()=>{
+backArrowChap.addEventListener("click",()=>{
     subPopup.style.display = "block";
     summary.style.display = "none";
     chapterPopup.style.display = "none";
+})
+backArrowMat.addEventListener("click",()=>{
+    chapterPopup.style.display = "block";
+    subPopup.style.display = "none";
+    summary.style.display = "none";
+    materialPopup.style.display = "none";
 })
 
 async function getData(){
@@ -183,7 +210,6 @@ async function getData(){
     
      subjectNameAll[0].style.borderBottom = "3px solid #09206F"
      
-
      e.addEventListener("click",evt=>{
          for(let item of subjectNameAll){
             item.style.borderBottom = "none"
@@ -192,29 +218,72 @@ async function getData(){
             item.classList.add("global-hide-class")
          }
          e.style.borderBottom = "3px solid #09206F"
-         console.log( subjectTopicsAll[id])
+         //console.log( subjectTopicsAll[id])
          subjectTopicsAll[id].classList.remove("global-hide-class")
      })
      
  })
 
  const ch_dropdown_options = document.querySelectorAll(".chapter-sub-topic p")
- const opt_placeholder = document.querySelector(".option-placeholder")
- 
+ const opt_placeholder = document.querySelectorAll(".option-placeholder")
+ //console.log(opt_placeholder)
  ch_dropdown_options.forEach(e=>{
      e.addEventListener("click",evt=>{
-        ch_dropdown_options.forEach(item=>{
+
+        ch_dropdown_options.forEach((item)=>{
             item.style.borderRight = "none"
         })
         e.style.borderRight = "3px solid  #09206F"
-         if(e.textContent.length > 21){
-
-             opt_placeholder.textContent = e.textContent.slice(0,22) + "..."
-            }
-            else{
-             opt_placeholder.textContent = e.textContent
-             
-         }
+        //console.log(e)
+        let id;
+        if(e.parentElement.classList.contains("ch-p") ){
+             id = 0;
+        }
+        if(e.parentElement.classList.contains("ch-c") ){
+             id = 1;
+        }
+        if(e.parentElement.classList.contains("ch-m") ){
+             id = 2;
+        }
+        if(e.textContent.length > 21){
+            //console.log(id)
+            opt_placeholder[id].textContent = e.textContent.slice(0,30) + "..."
+        }
+        else{
+            opt_placeholder[id].textContent = e.textContent  
+        }
      })
  })
 
+ const ch_nextBtn = document.querySelector(".ch-nextBtn")
+ const mt_nextBtn = document.querySelector(".mt-nextBtn")
+
+ ch_nextBtn.addEventListener("click",function(){
+  
+    materialPopup.style.display = "block"
+    subPopup.style.display = "none";
+    summary.style.display = "none";
+    chapterPopup.style.display = "none";
+    
+    
+ })
+ mt_nextBtn.addEventListener("click",function(){
+  
+    materialPopup.style.display = "none"
+    subPopup.style.display = "none";
+    summary.style.display = "block";
+    chapterPopup.style.display = "none";
+    
+    
+ })
+// fetch("/jeecarnot-mentee-frontend/cdn/Assets/menteeJS/chapterData.json")
+// .then(res=>res.json())
+// .then(data=> {
+//     for(i in data){
+//         if(i[0] == "p"){
+//             if(data[i].class == 12)
+//             console.log(data[i])
+
+//         }
+//     }
+// })

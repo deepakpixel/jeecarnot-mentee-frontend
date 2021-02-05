@@ -515,7 +515,7 @@ section{
         display: none !important;
     }
     
-    .sub-topics > div{
+    .material_topicbox{
         border-radius: 1em;
         box-shadow: 0px 3px 6px #00000029;
         width: 150px;
@@ -526,6 +526,11 @@ section{
         overflow: hidden;
         /* padding: 10px 10px 0 10px;  */
        
+    }
+    .no-data-text{
+        color: var(--dark-blue) !important;
+        font-size: 14px;
+       margin-bottom: 20px;
     }
     .sub-topics .no-topic-img{
         width: 200px !important;
@@ -582,7 +587,7 @@ section{
     max-height: 500px ;
     display: none;
 }
-.summary-head,.sub-p-head,.chapter-head{
+.summary-head,.sub-p-head,.chapter-head ,.mt-head{
     display: flex;
     padding: 1em;
     background-color: var(--dark-blue);
@@ -664,18 +669,22 @@ section{
     width: 70%;
     margin: auto;
 }
-.chapter-head .fa-arrow-left{
+.chapter-head .fa-arrow-left,.mt-head .fa-arrow-left, .summary-head .fa-arrow-left{
     cursor: pointer;
 }
 .chapter-main-topic{
     color: var(--dark-blue);
     display: flex;
+    font-size: 13px;
     align-items: center;
     justify-content: space-between;
     padding: 4px 15px;
     margin: 3px auto 7px auto;
     border-radius: 200px;
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.178);
+}
+.chapter-content{
+    display: none;
 }
 
 .dropDown-chapter{
@@ -713,7 +722,7 @@ section{
 .chapter-sub-topic p:last-child{
     margin-bottom: 10px;
 }
-.ch-nextBtn{
+.ch-nextBtn,.mt-nextBtn{
     color: #fff;
     background-color: var(--dark-blue);
     font-size: 12px;
@@ -734,6 +743,19 @@ section{
     border-radius: 3px;
     background-color: var(--dark-blue);
 }
+
+/* Material checkbox popup */
+.material_checkbox label{
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+    color: var(--dark-blue);
+}
+.material_checkbox input{
+    margin-left: 1em;
+}
+
+
 /* ----Account----- */
 
 .mentee-account{
