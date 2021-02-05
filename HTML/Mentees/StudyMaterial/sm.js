@@ -58,6 +58,7 @@ reqBtn.addEventListener("click",()=>{
     materialPopup.style.display = "none";
 
     document.body.style.pointerEvents = "none"
+    document.body.style.userSelect = "none"
 
     subPopup.style.pointerEvents = "all"
     summary.style.pointerEvents = "all"
@@ -72,6 +73,7 @@ function handleQuit(elem){
     materialPopup.style.display = "none";
    //elem.parentElement.style.display = "none"
    document.body.style.pointerEvents = "all"
+   document.body.style.userSelect = ""
 }
 let material = [];
 function selectSubject(elem){
@@ -127,6 +129,7 @@ chapterDD.forEach(e=>{
 
 const backArrowChap = document.querySelector(".chapter-head .fa-arrow-left")
 const backArrowMat = document.querySelector(".mt-head .fa-arrow-left")
+const backArrowSumm = document.querySelector(".summary-head .fa-arrow-left")
 
 backArrowChap.addEventListener("click",()=>{
     subPopup.style.display = "block";
@@ -139,6 +142,18 @@ backArrowMat.addEventListener("click",()=>{
     summary.style.display = "none";
     materialPopup.style.display = "none";
 })
+backArrowSumm.addEventListener("click",()=>{
+    chapterPopup.style.display = "none";
+    subPopup.style.display = "none";
+    summary.style.display = "none";
+    materialPopup.style.display = "block";
+})
+function addMore(){
+    chapterPopup.style.display = "none";
+    subPopup.style.display = "block";
+    summary.style.display = "none";
+    materialPopup.style.display = "none";
+}
 
 async function getData(){
     const getProfileDetails = await fetch("https://mentee.jeecarnot.com/profile/my-profile");

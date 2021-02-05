@@ -105,7 +105,7 @@ header{
     transition: 0.1s all ease-out;
 }
 .bar-transform{
-    transform: translate(200px);
+    transform: translate(220px);
 }
 /* ---- */
 /* Profile info top right */
@@ -768,19 +768,25 @@ section{
 }
 .acc-name-head{
     position: absolute;
-    top: -1.5em;
-    left: -1em;
+    top: -2em;
+    left: -2em;
     color: var(--dark-blue);
     font-size: 2em;
+    font-weight: bold;
 }
 .account-head{
     display: flex;
     border-radius: 1em 1em 0 0;
     overflow: hidden;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.158);
-    justify-content: space-evenly;
+    /* justify-content: center; */
+    
+}
+.membership{
+    display: none;
 }
 .account-head p{
+    flex: 1;
     color: var(--dark-blue);
     cursor: pointer;
     padding: 0.7em 0.3em;
@@ -826,9 +832,9 @@ section{
 .extend-mem:hover{
     background-color: rgb(104, 78, 255);
 }
-.acc-active{
-    display: none;
-}
+/* .acc-active{
+     display: none; 
+} */
 .acc-pass-input{
     display: flex;
     flex-direction: column;
@@ -838,6 +844,56 @@ section{
     margin-top: 6px;
     padding: 2px 10px;
     border: 2px solid var(--dark-blue);
+}
+/* pay history */
+.acc-pay-his{
+    background-color:#fff;
+    overflow: hidden;
+    padding: 0 0 1em 0;
+    position: relative;
+    border-radius: 1em;
+}
+
+
+.key-value_pay{
+    margin: 2em 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    
+}
+.date-time{
+    
+    color: var(--notify-text);
+    font-weight: 600;
+    margin: 0 2em;
+    position: relative;
+}
+.date-time::after{
+    content: "";
+    width: 1.5px;
+    height: 3.5em;
+    position: absolute;
+    left: 50%;
+    top: 57%;
+    background-color: var(--notify-text);
+}
+.pay-details p{
+    color: var(--notify-text);
+}
+.pay-details span{
+    font-weight: 300;
+}
+.invoice{
+    color: var(--dark-blue);
+    display: flex;
+    margin: 4px 0;
+    cursor: pointer;
+}
+.invoice  p{
+    font-weight: 300;
+    margin: 0 3em 0 0;
+    color: var(--dark-blue);
 }
 /* -------------- */
 /* Notification bar */
@@ -1242,9 +1298,12 @@ color: var(--mid-gray);
         margin-top: 4em;
         width: 85vw;
     }
-    .mentee-studyMaterial,.mentee-account{
+    .mentee-studyMaterial{
         margin: 12em 0 0 10vw;
         /* width: 500px; */
+    }
+    .mentee-account{
+        margin:8em 0 0 10vw;
     }
   
     .mentee-profile-box,.feedback-wrapper{
