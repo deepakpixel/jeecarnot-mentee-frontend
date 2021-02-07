@@ -116,20 +116,30 @@ function selectSubject(elem){
     }
     console.log(material)
 }
-const chapterDD = document.querySelectorAll(".dropDown-chapter");
+// const chapterDD = document.querySelectorAll(".dropDown-chapter");
+const mainAllDD = document.querySelectorAll(".chapter-main-topic");
+
 const sub_topic = document.querySelectorAll(".chapter-sub-topic");
 
-chapterDD.forEach(e=>{
+// chapterDD.forEach(e=>{
+//     e.addEventListener("click",()=>{
+//         console.log(e.classList.contains("ch-rotate"))
+//         e.classList.toggle("ch-rotate")
+//         e.parentElement.nextElementSibling.classList.toggle("chapter-dropDown")
+//     })
+// })
+mainAllDD.forEach(e=>{
     e.addEventListener("click",()=>{
-        console.log(e.classList.contains("ch-rotate"))
-        e.classList.toggle("ch-rotate")
-        e.parentElement.nextElementSibling.classList.toggle("chapter-dropDown")
+        // console.log(e.classList.contains("ch-rotate"))
+        e.children[1].classList.toggle("ch-rotate")
+        e.children[1].parentElement.nextElementSibling.classList.toggle("chapter-dropDown")
+        console.log("E :",e.children[1])
     })
 })
 
 const backArrowChap = document.querySelector(".chapter-head .fa-arrow-left")
 const backArrowMat = document.querySelector(".mt-head .fa-arrow-left")
-const backArrowSumm = document.querySelector(".summary-head .fa-arrow-left")
+// const backArrowSumm = document.querySelector(".summary-head .fa-arrow-left")
 
 backArrowChap.addEventListener("click",()=>{
     subPopup.style.display = "block";
@@ -142,12 +152,12 @@ backArrowMat.addEventListener("click",()=>{
     summary.style.display = "none";
     materialPopup.style.display = "none";
 })
-backArrowSumm.addEventListener("click",()=>{
-    chapterPopup.style.display = "none";
-    subPopup.style.display = "none";
-    summary.style.display = "none";
-    materialPopup.style.display = "block";
-})
+// backArrowSumm.addEventListener("click",()=>{
+//     chapterPopup.style.display = "none";
+//     subPopup.style.display = "none";
+//     summary.style.display = "none";
+//     materialPopup.style.display = "block";
+// })
 function addMore(){
     chapterPopup.style.display = "none";
     subPopup.style.display = "block";
@@ -223,17 +233,25 @@ async function getData(){
 
  subjectNameAll.forEach((e,id)=>{
     
+   
+     subjectNameAll[0].style.backgroundColor = "#09206F"
+     subjectNameAll[0].style.color = "#fff"
      subjectNameAll[0].style.borderBottom = "3px solid #09206F"
      
      e.addEventListener("click",evt=>{
          for(let item of subjectNameAll){
+           
+            item.style.color = "#09206F"
+            item.style.backgroundColor = "#fff"
             item.style.borderBottom = "none"
          }
          for(let item of subjectTopicsAll){
             item.classList.add("global-hide-class")
          }
+        
          e.style.borderBottom = "3px solid #09206F"
-         //console.log( subjectTopicsAll[id])
+        e.style.backgroundColor = "#09206F"
+        e.style.color = "#fff"
          subjectTopicsAll[id].classList.remove("global-hide-class")
      })
      
@@ -246,10 +264,18 @@ async function getData(){
      e.addEventListener("click",evt=>{
 
         ch_dropdown_options.forEach((item)=>{
-            item.style.borderRight = "none"
+            item.style.backgroundColor = ""
         })
-        e.style.borderRight = "3px solid  #09206F"
-        //console.log(e)
+
+        e.style.backgroundColor = "lightblue"
+       
+        mainAllDD.forEach(e=>{
+           
+            e.children[1].classList.toggle("ch-rotate")
+            e.children[1].parentElement.nextElementSibling.classList.toggle("chapter-dropDown")   
+            
+        })
+
         let id;
         if(e.parentElement.classList.contains("ch-p") ){
              id = 0;

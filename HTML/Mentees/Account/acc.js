@@ -117,10 +117,14 @@ async function getData(){
  const tabs = document.querySelectorAll(".membership");
  const headBtns = document.querySelectorAll(".account-head p");
  headBtns.forEach((e,id)=>{
+     headBtns[0].style.backgroundColor = "#09206F"
+     headBtns[0].style.color = "#fff"
      headBtns[0].style.borderBottom = "3px solid #09206F"
      
      e.addEventListener("click",evt=>{
         for(let i of headBtns){
+            i.style.color = "#09206F"
+            i.style.backgroundColor = "#fff"
             i.style.borderBottom = "none"
          }
         tabs.forEach(item=>{
@@ -128,6 +132,55 @@ async function getData(){
         })
 
         e.style.borderBottom = "3px solid #09206F"
+        e.style.backgroundColor = "#09206F"
+        e.style.color = "#fff"
         tabs[id].classList.add("hidden")
      })
+ })
+
+ const save_pass = document.querySelector(".save-pass")
+ const pass_input = document.querySelectorAll(".acc-pass-input input")
+console.log(pass_input)
+ save_pass.addEventListener("click",evt=>{
+
+     let error = false;
+     pass_input.forEach(e=>{
+        if(/^\s*$/.test(e.value)){
+            error =true
+            console.log(e.value.length)
+            return swal(
+                "Error",
+                "Enter all inputs",
+                "warning"
+            )
+        }
+        if(pass_input[1].value != pass_input[2].value){
+            error = true
+            return swal(
+                "Error",
+                "Confirm same password",
+                "warning"
+            )
+        }
+    })
+    if(!error){
+        save_pass.disabled = true
+        save_pass.style.cursor = "not-allowed"
+        save_pass.textContent += "..."
+        fetch("https://mentee.jeecarnot.com/account/change-password",{
+            method : "POST",
+            "Content-Type" : "application/json",
+            body : JSON.stringify({
+                newPassword : pass_input[2].value,
+                oldPassword: pass_input[0].value
+            })
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            save_pass.disabled = false
+            save_pass.style.cursor = "pointer"
+            save_pass.textContent = "Save Changes"
+        })
+    }
  })

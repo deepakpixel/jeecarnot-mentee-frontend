@@ -194,7 +194,7 @@ section{
 /* Mentee Home */
 .mentor-profile{
     background-color: #fff;
-    width: 70vw;
+    width: 70% ;
     height: 16em;
     margin: 2em auto;
     border-radius: 1em;
@@ -448,6 +448,7 @@ section{
         position: absolute;
         top: -120px;
         width: 100%;
+        min-width: 306px;
     }
     .top-part h1, .top-part p{
         position: relative;
@@ -476,6 +477,7 @@ section{
         position: relative;
         border-radius: 1em;
         text-align: center;
+        min-width: 306px;
         background-color: #fff;
         /* box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267); */
     }
@@ -498,17 +500,17 @@ section{
         line-height: 2.5em;
     }
     .subject-name p:hover{
-        color: #fff;
-        background-color: var(--dark-blue);
+       border-bottom: 3px solid var(--dark-blue) !important;
     }
     .sub-topics{
-        padding: 1em;
+        padding: 2em;
         width: 540px;
         display: grid;
         font-size: 13px;
-        justify-content: center;
+        justify-content: center ;
         grid-template-columns: auto auto auto;
-        /* grid-gap: 2em;  */
+        grid-gap: 2em; 
+        margin-left:0.5em;
         
     }
     .global-hide-class{
@@ -519,18 +521,15 @@ section{
         border-radius: 1em;
         box-shadow: 0px 3px 6px #00000029;
         width: 150px;
-        height: 115px;
-        margin: 1em;
-        /* margin: auto; */
+        height: 115px; 
         position: relative;
         overflow: hidden;
-        /* padding: 10px 10px 0 10px;  */
-       
+        
     }
     .no-data-text{
         color: var(--dark-blue) !important;
         font-size: 14px;
-       margin-bottom: 20px;
+        margin-bottom: 20px;
     }
     .sub-topics .no-topic-img{
         width: 200px !important;
@@ -672,6 +671,10 @@ section{
 .chapter-head .fa-arrow-left,.mt-head .fa-arrow-left, .summary-head .fa-arrow-left{
     cursor: pointer;
 }
+.summary-head .fa-arrow-left{
+    opacity: 0;
+    pointer-events: none;
+}
 .chapter-main-topic{
     color: var(--dark-blue);
     display: flex;
@@ -732,17 +735,14 @@ section{
     margin: 1em 50%;
     transform: translate(-50%);
 }
-::-webkit-scrollbar{
+.sm-chapter *::-webkit-scrollbar{
     width: 4px;
 }
-::-webkit-scrollbar-thumb{
+.sm-chapter *::-webkit-scrollbar-thumb{
     border-radius: 3px;
     background-color: var(--dark-blue);
 }
-::-moz-scrollbar-thumb{
-    border-radius: 3px;
-    background-color: var(--dark-blue);
-}
+
 
 /* Material checkbox popup */
 .material_checkbox label{
@@ -796,8 +796,8 @@ section{
 
 }
 .account-head p:hover{
-    color: #fff;
-    background-color: var(--dark-blue);
+   
+    border-bottom: 3px solid var(--dark-blue) !important;
 }
 .mem-key-value{
     display: flex;
@@ -1413,5 +1413,17 @@ color: var(--mid-gray);
     .key-value-profile{
         margin: 0;
     }
-   
+    .issued-material .top-part{
+        transform-origin: top ;
+        transform: scale(0.9);
+    }
+    
+}
+@media only screen and (max-width: 300px){
+    
+    .mentee-studyMaterial{
+        transform-origin: top left;
+        transform: scale(0.8);
+        margin-left: 10px;
+    }
 }
