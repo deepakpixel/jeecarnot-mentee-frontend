@@ -197,6 +197,7 @@ section{
     width: 70% ;
     height: 16em;
     margin: 2em auto;
+    margin-left: 25vw ; 
     border-radius: 1em;
     box-shadow: 0 1.5px 10px rgba(0, 0, 0, 0.267);
 }
@@ -1296,6 +1297,7 @@ color: var(--mid-gray);
     }
     .mentor-profile{
         margin-top: 4em;
+        margin-left: auto; 
         width: 85vw;
     }
     .mentee-studyMaterial{

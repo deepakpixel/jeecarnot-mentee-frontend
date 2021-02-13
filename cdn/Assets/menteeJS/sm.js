@@ -66,7 +66,7 @@ reqBtn.addEventListener("click",()=>{
     materialPopup.style.pointerEvents = "all"
 })
 function handleQuit(elem){
-    console.log(elem)
+    
     subPopup.style.display = "none";
     summary.style.display = "none";
     chapterPopup.style.display = "none";
@@ -114,7 +114,7 @@ function selectSubject(elem){
         // chapterPopup.style.display = "block";
         material.push(postString)
     }
-    console.log(material)
+    
 }
 // const chapterDD = document.querySelectorAll(".dropDown-chapter");
 const mainAllDD = document.querySelectorAll(".chapter-main-topic");
@@ -123,17 +123,17 @@ const sub_topic = document.querySelectorAll(".chapter-sub-topic");
 
 // chapterDD.forEach(e=>{
 //     e.addEventListener("click",()=>{
-//         console.log(e.classList.contains("ch-rotate"))
+
 //         e.classList.toggle("ch-rotate")
 //         e.parentElement.nextElementSibling.classList.toggle("chapter-dropDown")
 //     })
 // })
 mainAllDD.forEach(e=>{
     e.addEventListener("click",()=>{
-        // console.log(e.classList.contains("ch-rotate"))
+        
         e.children[1].classList.toggle("ch-rotate")
         e.children[1].parentElement.nextElementSibling.classList.toggle("chapter-dropDown")
-        console.log("E :",e.children[1])
+        
     })
 })
 
@@ -198,7 +198,7 @@ async function getData(){
             "membershipExpiresOn": "1970-01-01T00:00:00.000Z"
         }
     }
-    console.log(data)
+    
     if(data.type == "success"){
         const {name,email} = data.user;
        
@@ -323,7 +323,7 @@ async function getData(){
 //     for(i in data){
 //         if(i[0] == "p"){
 //             if(data[i].class == 12)
-//             console.log(data[i])
+
 
 //         }
 //     }
